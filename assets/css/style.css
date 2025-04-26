@@ -302,7 +302,7 @@ body {
 }
 
 .investor-info {
-  background: url(/assets/img/bg2.svg) no-repeat center top -70px;
+  background: url(assets/img/bg2.svg) no-repeat center top -70px;
 }
 
 @media (max-width: 1024px) {
