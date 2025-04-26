@@ -292,17 +292,17 @@ body {
 }
 
 .card-2 {
-  background-image: url(/assets/img/line2.svg);
+  background-image: url(../img/line2.svg);
   background-repeat: no-repeat;
 }
 
 .card-1 {
-  background-image: url(/assets/img/line1.svg);
+  background-image: url(../img/line1.svg);
   background-repeat: no-repeat;
 }
 
 .investor-info {
-  background: url(assets/img/bg2.svg) no-repeat center top -70px;
+  background: url(../img/bg2.svg) no-repeat center top -70px;
 }
 
 @media (max-width: 1024px) {
