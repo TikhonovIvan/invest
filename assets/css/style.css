@@ -1,0 +1,672 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/*
+100 – Thin || Hairline
+200 – Extra Light || Ultra Light || Thin
+300 – Light
+400 – Normal || Regular
+500 – Medium
+600 – Semi Bold || Demi Bold
+700 – Bold
+800 – Extra Bold || Ultra Bold || Heavy
+900 – Black || Heavy
+*/
+
+:root {
+  --text-color-black: #000;
+  --text-color-nephritis: #21836d;
+  --text-color-white: #fff;
+
+  --bg-color-nephritis: #21836d;
+  --bg-color-white: #fff;
+  --bg-color-gray: #f2f2f2;
+  --bg-color-black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
+}
+
+a,
+li {
+  color: var(--text-color-black);
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--text-color-black);
+  background-color: var(--bg-color-white);
+  letter-spacing: -0.03em; /*возможно убрать */
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title-nephritis {
+  color: var(--text-color-nephritis);
+}
+
+/* Header */
+.header {
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  margin-right: 60px;
+}
+
+.logo span {
+  color: var(--text-color-nephritis);
+  border-bottom: 1px solid var(--text-color-nephritis);
+}
+.nav {
+  margin-right: 65px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.nav-item {
+  font-size: 14px;
+}
+.header-bnt {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 17px 35px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.btn-active {
+  background-color: var(--bg-color-nephritis);
+  color: var(--bg-color-white);
+}
+
+/* Мобильная версия start  */
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40px;
+  height: 18px;
+}
+
+.burger span {
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  transform: scale(1);
+  background-color: var(--bg-color-nephritis);
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--bg-color-nephritis);
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+/*Добавление класса active*/
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.open {
+  display: flex !important;
+}
+/* Мобильная версия end*/
+
+/*Header адаптивность*/
+@media (max-width: 1024px) {
+  .burger {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+  }
+
+  .header {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    z-index: 60;
+    background-color: var(--bg-color-white);
+  }
+  .nav {
+    display: none;
+    flex-wrap: wrap;
+    position: fixed;
+    height: 25%;
+    width: 100%;
+    top: 90px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 40px;
+    border-bottom: 2px solid var(--bg-color-gray);
+    background-color: var(--bg-color-white);
+  }
+
+  .nav .nav-list {
+    justify-content: center;
+    margin: 0 auto;
+    row-gap: 30px;
+  }
+}
+
+.header-bnt-menu {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .header-bnt {
+    display: none;
+  }
+  .header-bnt-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .nav {
+    height: 60%;
+  }
+
+  .nav .nav-list {
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
+
+/* main */
+.investor-info {
+  background-color: #f6f7f8 !important;
+  padding: 70px 0 90px 0;
+}
+.investor-info-title {
+  margin-bottom: 390px; /*390*/
+}
+.investor-info-title h1 {
+  font-size: 50px;
+  width: 650px;
+  margin-bottom: 25px;
+}
+.investor-info-title h1 span {
+  /* text-decoration: underline ; */
+  color: var(--text-color-nephritis);
+  border-bottom: 4px solid var(--text-color-nephritis);
+}
+.investor-info-text {
+  font-size: 18px;
+}
+.investor-info-cards {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.investor-info-card {
+  width: 670px;
+  height: 210px;
+  border-radius: 20px;
+  padding: 40px 60px 0 40px;
+  letter-spacing: -0.02em;
+}
+.investor-info-card.card-1 {
+  background-color: #000;
+  color: var(--text-color-white);
+}
+
+.investor-info-card h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.investor-info-card.card-2 {
+  background-color: var(--bg-color-white) !important;
+  z-index: 10;
+}
+
+.card-2 {
+  background-image: url(/assets/img/line2.svg);
+  background-repeat: no-repeat;
+}
+
+.card-1 {
+  background-image: url(/assets/img/line1.svg);
+  background-repeat: no-repeat;
+}
+
+.investor-info {
+  background: url(/assets/img/bg2.svg) no-repeat center top -70px;
+}
+
+@media (max-width: 1024px) {
+  .investor-info {
+    padding-top: 150px;
+    background-size: 100%;
+    background-position: center top 70px;
+  }
+
+  .investor-info-title {
+    margin-bottom: 200px; /*390*/
+  }
+  .investor-info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .investor-info {
+    background-size: 0%;
+  }
+  .investor-info-title h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .investor-info-title {
+    margin-bottom: 100px; /*390*/
+  }
+
+  .investor-info-card {
+    height: 100%;
+    padding: 40px 60px 40px 40px;
+  }
+
+  .card-1 {
+    background-image: url(/assets/img/line3.svg);
+    background-position: center bottom;
+  }
+  .card-2 {
+    background-position: center bottom;
+  }
+}
+
+@media (max-width: 425px) {
+  .investor-info-title h1 {
+    font-size: 30px;
+  }
+
+  .investor-info-card {
+    padding: 20px;
+  }
+}
+
+/*Possibilities Start*/
+
+.possibilities {
+  background-color: #f6f7f8;
+  padding: 100px 0;
+}
+.possibilities-block h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.03em;
+  margin-bottom: 60px;
+}
+
+.possibilities-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 10px;
+}
+.possibilities-card {
+  border-radius: 28px;
+}
+
+.possibilities-card-img {
+  border-radius: 28px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-nephritis) !important;
+}
+
+.possibilities-card {
+  width: 450px;
+  background-color: var(--bg-color-white);
+}
+
+.possibilities-card-info {
+  padding: 0 20px 20px 20px;
+}
+.possibilities-card h4 {
+  margin: 20px 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.possibilities-card p {
+  margin-bottom: 28px;
+}
+
+.possibilities-card a {
+  width: 260px;
+  padding: 17px 0;
+  display: inline-block;
+  text-align: center;
+  border-radius: 16px;
+  color: var(--bg-color-white);
+  background-color: var(--bg-color-black);
+}
+
+@media (max-width: 1024px) {
+  .possibilities {
+    padding: 50px 0;
+  }
+  .possibilities-cards {
+    justify-content: space-around;
+    row-gap: 60px;
+    column-gap: 10px;
+  }
+  .possibilities-card {
+    width: 365px;
+  }
+}
+
+@media (max-width: 768px) {
+  .possibilities-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .possibilities-block h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .possibilities-block h2 {
+    font-size: 30px;
+  }
+
+  .possibilities {
+    padding: 20px 0;
+  }
+}
+
+/* Statistics  */
+
+.statistics {
+  padding: 100px 0;
+  background-color: var(--bg-color-white);
+}
+.statistics-block h2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+.statistics-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.statistics-card {
+  width: 335px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #f6f7f8;
+}
+
+.statistics-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--bg-color-white);
+  margin-bottom: 40px;
+}
+
+.statistics-card h4 {
+  font-size: 70px;
+  font-weight: 600;
+  color: var(--text-color-nephritis);
+  margin-bottom: 10px;
+}
+
+.statistics-card p {
+  font-size: 20px;
+}
+
+@media (max-width: 425px) {
+  .statistics-block h2 {
+    font-size: 40px;
+  }
+}
+
+/* Questions */
+
+.questions {
+  padding: 100px 0;
+  background-color: #f6f7f8;
+}
+
+.questions-block {
+  display: flex;
+  justify-content: space-between;
+}
+.questions-block h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.questions-boxs {
+  width: 50%;
+}
+
+.questions-boxs .questions-box .questions-box-title::after {
+  content: "+";
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.questions-boxs .questions-box.active .questions-box-title::after {
+  content: "×";
+}
+
+.questions-box {
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--bg-color-white);
+  margin-bottom: 20px;
+}
+.questions-box-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--bg-color-nephritis);
+  margin-bottom: 16px;
+}
+.questions-box-content {
+  color: #787878;
+}
+
+.questions-boxs .questions-box .questions-box-content {
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.7s;
+}
+
+@media (max-width: 768px) {
+  .questions-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .questions-block h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .questions-boxs {
+    width: 100%;
+  }
+  .br {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .questions-block h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+}
+
+/*  Footer  */
+
+.footer {
+  padding: 70px 0;
+  font-size: 14px;
+  color: #656656;
+  background-color: var(--bg-color-black);
+}
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 144px;
+}
+
+.nav-contact {
+  display: flex;
+}
+
+.footer-block h4 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--text-color-white);
+}
+.logo a {
+  color: var(--text-color-white);
+}
+.title-nephritis {
+}
+.f-nav {
+}
+.f-nav-list {
+  columns: 2;
+  column-gap: 40px; /* расстояние между колонками */
+}
+.f-nav-item {
+  margin-bottom: 16px;
+}
+.f-nav-link {
+  color: #656656;
+}
+.contact {
+  margin-left: 100px;
+}
+
+.contact a {
+  color: #656656;
+}
+
+.contact-block {
+  display: flex;
+  gap: 24px;
+}
+
+.copyright {
+  display: flex;
+}
+.copyright-block1 {
+  margin-right: 423px;
+}
+
+@media (max-width: 768px) {
+  .contact-block {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
+}
