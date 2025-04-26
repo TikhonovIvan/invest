@@ -341,7 +341,7 @@ body {
   }
 
   .card-1 {
-    background-image: url(/assets/img/line3.svg);
+    background-image: url(../img/line3.svg);
     background-position: center bottom;
   }
   .card-2 {
@@ -674,7 +674,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 15px;
   }
 
   .copyright-block1 {
