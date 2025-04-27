@@ -7,7 +7,6 @@
 .school-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 238px;
 }
 
 .school-intro {
@@ -17,6 +16,9 @@
 }
 .school-text {
   margin-bottom: 137px;
+}
+.school-block-info {
+  width: 560px;
 }
 
 .school-block-info a {
@@ -29,7 +31,49 @@
   color: var(--text-color-white);
   background-color: var(--bg-color-nephritis);
 }
-.school-img {
+
+@media (max-width: 1024px) {
+  .school-wrapper {
+    padding-top: 50px;
+  }
+  .school-intro {
+    font-size: 40px;
+  }
+
+  .school-img img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .school-block-info {
+    width: 100%;
+  }
+  .school-intro {
+    font-size: 30px;
+  }
+  .school-wrapper {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .school-text {
+    margin-bottom: 50px;
+  }
+  .school-block-info a {
+    margin: 0 auto;
+  }
+  .school-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .school-block-info a {
+    width: 100%;
+  }
 }
 
 /* Program-info */
@@ -44,8 +88,7 @@
 .program-info-block h2 {
   margin-bottom: 40px;
 }
-.title-nephritis {
-}
+
 .program-info-cards {
   display: flex;
   justify-content: space-between;
@@ -53,7 +96,7 @@
   margin-bottom: 40px;
 }
 .program-info-card {
-  width: 480px;
+  width: 440px;
   padding: 10px 10px 20px 10px;
   border: 1px solid #dcdfe4;
   border-radius: 30px;
@@ -93,10 +136,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 440px;
+  width: 400px;
   height: 56px;
   border-radius: 16px;
-
   color: var(--text-color-white);
   background-color: var(--bg-color-black);
 }
@@ -129,7 +171,46 @@
   font-weight: 600;
   color: var(--text-color-nephritis);
 }
-.bonus-skil-text {
+
+@media (max-width: 1390px) {
+  .program-info-cards {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 930px) {
+  .program-info-card {
+    width: 350px;
+  }
+
+  .card-info-btn a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .program-info-card {
+    width: 100%;
+  }
+
+  .bonus-title {
+    font-size: 20px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .bonus {
+    display: block;
+  }
+}
+@media (max-width: 425px) {
+  .program-info-block h2 {
+    font-size: 40px;
+  }
+  .card-3-p {
+    width: 100%;
+  }
 }
 
 /* Expert  */
@@ -138,15 +219,10 @@
   padding: 100px 0;
 }
 
-.expert-block {
-}
-
 .expert-block-title {
   margin-bottom: 60px;
 }
 
-.expert-cards {
-}
 .expert-card {
   width: 335px;
   padding: 10px 10px 56px 10px;
@@ -206,14 +282,50 @@
   position: static;
 }
 
+@media (max-width: 1200px) {
+  .expert-card {
+    width: 300px;
+  }
+  .swiper-wrapper {
+    align-items: center; /* если карточки разные по высоте */
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* чтобы карточка внутри слайда была по центру */
+  }
+}
+
+@media (max-width: 1024px) {
+  .expert-block-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .expert-card {
+    width: 320px;
+  }
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+  .expert-card {
+    width: 290px;
+  }
+  .expert-img img {
+    width: 100%;
+  }
+  .expert-block-title {
+    font-size: 25px;
+  }
+}
+
 /* article  */
 
 .article {
   padding: 100px 0;
 }
 
-.article-block {
-}
 .article-block-title {
   margin-bottom: 60px;
 }
@@ -221,7 +333,7 @@
 .article-cards {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 .article-card {
   width: 335px;
@@ -241,4 +353,158 @@
 .article-card a {
   font-weight: 600;
   color: var(--text-color-nephritis);
+}
+
+@media (max-width: 1390px) {
+  .article-cards {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-cards {
+    justify-content: center;
+  }
+  .article-block-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .article-block-title {
+    font-size: 30px;
+  }
+  .article-card {
+    width: 100%;
+  }
+  .article-card img {
+    width: 100%;
+  }
+}
+
+/* reviews */
+.reviews {
+  padding: 100px 0;
+}
+
+.reviews-block-title {
+  margin-bottom: 60px;
+}
+
+.reviews-card {
+  width: 450px;
+  height: 439px;
+  border: 1px solid #dcdfe4;
+  border-radius: 30px;
+  padding: 20px;
+}
+.reviews-card-img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.reviews-card-img-user {
+  margin-right: 10px;
+}
+.reviews-card-img p {
+  opacity: 0.3;
+  font-size: 14px;
+  margin-left: 77px;
+}
+
+.reviews-card-name {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.reviews-card-prof {
+  font-size: 20px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+.reviews-card-quote {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.reviews-card-text {
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.reviews-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.reviews-navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-swiper-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--bg-color-nephritis);
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.reviews-button-prev::after,
+.reviews-button-next::after {
+  font-size: 16px;
+  color: var(--bg-color-nephritis);
+}
+
+/* Чтобы кнопки были внутри блока */
+.reviews-button-prev,
+.reviews-button-next {
+  position: static;
+}
+
+@media (max-width: 1390px) {
+  .reviews-card {
+    width: 400px;
+  }
+
+  .swiper-wrapper {
+    align-items: center; /* если карточки разные по высоте */
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* чтобы карточка внутри слайда была по центру */
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .reviews-card {
+    height: 100%;
+  }
+
+  .reviews-card-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .reviews-card-img-user {
+    margin-right: 0;
+  }
+  .reviews-card-img p {
+    opacity: 0.3;
+    font-size: 14px;
+    margin-left: 0;
+  }
 }

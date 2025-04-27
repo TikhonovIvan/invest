@@ -544,6 +544,7 @@ body {
   right: 20px;
   font-size: 40px;
   font-weight: 200;
+  color: var(--bg-color-nephritis);
 }
 
 .questions-boxs .questions-box.active .questions-box-title::after {
@@ -560,8 +561,12 @@ body {
 .questions-box-title {
   font-size: 20px;
   font-weight: 600;
-  color: var(--bg-color-nephritis);
+  color: var(--bg-color-black);
   margin-bottom: 16px;
+}
+
+.questions-box.active .questions-box-title {
+  color: var(--bg-color-nephritis);
 }
 .questions-box-content {
   color: #787878;
@@ -599,9 +604,15 @@ body {
     font-size: 30px;
     text-align: center;
   }
+  .questions-box-title {
+    width: 300px;
+  }
 }
 
 @media (max-width: 375px) {
+  .questions-box-title {
+    width: 240px;
+  }
 }
 
 /*  Footer  */
