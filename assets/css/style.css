@@ -232,12 +232,18 @@ body {
   }
 
   .nav {
-    height: 60%;
+    height: 40%;
   }
 
   .nav .nav-list {
     justify-content: center;
     row-gap: 20px;
+  }
+}
+
+@media (max-width: 427px) {
+  .nav {
+    height: 60%;
   }
 }
 

@@ -1,1 +1,164 @@
- 
+.login {
+  background-image: url(../img/login/bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 100vh;
+  padding-bottom: 100px;
+}
+
+.logo-form a {
+  font-weight: 700;
+}
+
+.logo-form span {
+  color: var(--text-color-nephritis);
+  border-bottom: 1px solid var(--text-color-nephritis);
+}
+
+.logo-form {
+  padding-top: 40px;
+}
+
+.login-form h2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.logo-form {
+  margin-bottom: 40px;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  width: 478px;
+}
+
+.form-block {
+  position: relative;
+  gap: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 478px;
+  height: 60px;
+  padding-left: 52px;
+  background-color: #f5f5f5;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border: 2px solid var(--bg-color-nephritis);
+}
+
+.input-wrapper img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+}
+
+.form-block a {
+  text-align: end;
+  color: var(--text-color-nephritis);
+  margin-top: 6px;
+  margin-bottom: 30px;
+}
+
+.form-block button {
+  width: 478px;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color-white);
+  background-color: var(--bg-color-nephritis);
+  cursor: pointer;
+}
+
+.no-account {
+  margin-top: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.no-account a {
+  text-decoration: underline;
+  color: var(--text-color-nephritis);
+}
+.login-image {
+  background-color: var(--bg-color-nephritis);
+}
+
+.form-block-text {
+  font-weight: 6000;
+}
+
+.account {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.account-link {
+  text-decoration: underline;
+  opacity: 50%;
+  color: var(--text-color-black) !important;
+}
+
+@media (max-width: 992px) {
+  .form-block a {
+    color: var(--text-color-black);
+  }
+
+  .form-block button {
+    background-color: var(--bg-color-black);
+  }
+
+  .no-account a {
+    text-decoration: underline;
+    color: var(--text-color-black);
+  }
+}
+
+@media (max-width: 600px) {
+  .login-form h2 {
+    font-size: 40px;
+  }
+  .login {
+    background-image: none;
+  }
+  .form-block {
+    width: 100%;
+  }
+  .input-wrapper {
+    width: 100%;
+  }
+  .input-wrapper input {
+    width: 100%;
+  }
+  .form-block a {
+    color: var(--text-color-nephritis);
+  }
+  .form-block button {
+    width: 100%;
+    background-color: var(--bg-color-nephritis);
+  }
+
+  .form-block a {
+    margin-bottom: 10px;
+  }
+  .no-account {
+    margin-top: 20px;
+  }
+}
