@@ -1,0 +1,68 @@
+.projects-investments-bg {
+  background-color: #f5f5f5;
+}
+.projects-investments {
+}
+.projects-investments-block {
+}
+.advertising {
+  padding: 30px 0;
+}
+.projects-investments-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.projects-investments-card {
+  padding: 10px 10px 20px 10px;
+  width: 265px;
+  height: 342px;
+  background: #ffffff;
+  border-radius: 24px;
+}
+.investments-card-img img {
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+.investments-card-body {
+  padding-left: 10px;
+}
+.investments-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.investments-card-profi {
+  font-size: 12px;
+  line-height: 120%;
+  color: #626975;
+  margin-bottom: 10px;
+}
+
+.investments-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.investments-card-info-body {
+  display: flex;
+  justify-content: space-between;
+}
+.investments-card-info-text {
+  font-size: 14px;
+  color: #626975;
+}
+.investments-card-info-nubder {
+}
+
+.investments-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: var(--text-color-white);
+  background-color: var(--text-color-nephritis);
+}
