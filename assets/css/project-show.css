@@ -1,0 +1,72 @@
+.project-show {
+}
+
+.project-show-block {
+}
+.crumbs {
+  margin-bottom: 30px;
+}
+.crumbs a {
+  font-weight: 500;
+  font-size: 12px;
+  color: #9f9f9f;
+}
+.project-show-title {
+  margin-bottom: 22px;
+}
+.project-show-info {
+  display: flex;
+}
+.project-show-slode-img img {
+  width: 700px;
+}
+.slode-img-slider {
+  display: flex;
+  gap: 20px;
+}
+.slode-img-slider img {
+  width: 106px;
+  height: 110px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.project-show-info-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.list-block {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.list-block-text1 {
+  width: 170px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #9f9f9f;
+}
+
+.px-30 {
+  margin-bottom: 30px;
+}
+.px-30 .list-block-text2 {
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.list-block-text2 {
+  font-size: 12px;
+  font-weight: 500;
+  font-size: 12px;
+}
+.project-show-info-contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 30px;
+}
+
+/* слайдер */

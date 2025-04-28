@@ -124,6 +124,12 @@
   color: var(--bg-color-nephritis);
 }
 
+.projects-id {
+  padding: 80px 0;
+}
+.projects-id-title {
+  margin-bottom: 55px;
+}
 @media (max-width: 1024px) {
   .projects-investments-cards {
     justify-content: center;
