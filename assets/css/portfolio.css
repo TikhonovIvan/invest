@@ -2,7 +2,7 @@
   background-color: #f5f5f5;
 }
 .investment-portfolio {
-  /* padding-bottom: 140px; */
+  padding-bottom: 140px;
 }
 .investment-portfolio-info {
   display: flex;
@@ -15,7 +15,6 @@
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 24px;
-  width: 790px;
 }
 
 .investment-portfolio-block p {
@@ -47,12 +46,81 @@
 }
 
 .investment-portfolio-img {
-  width: 700px;
   background: radial-gradient(
     61.99% 61.99% at 50% 50%,
     #21836d 0%,
     #f5f5f5 61.67%
   );
+  height: 600px;
+}
+.investment-portfolio-img img {
+  padding-top: 50px;
+  width: 600px;
+}
+
+@media (max-width: 1350px) {
+  .investment-portfolio-title {
+    font-size: 40px;
+  }
+  .investment-portfolio-block p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .investment-portfolio-img {
+    height: 500px;
+  }
+  .investment-portfolio-img img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .investment-portfolio-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .investment-portfolio {
+    padding-top: 150px;
+  }
+  .investment-portfolio-title {
+    font-size: 35px;
+  }
+  .investment-portfolio-img {
+    display: none;
+  }
+  .investment-portfolio {
+    width: 100%;
+    margin: 0 auto;
+    background: url(../img/portfolio/bg.png),
+      radial-gradient(61.99% 61.99% at 50% 50%, #21836d 0%, #f5f5f5 61.67%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .investment-portfolio-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .investment-portfolio-title {
+    font-size: 25px;
+    color: var(--text-color-black);
+  }
+  .title-nephritis {
+    color: var(--text-color-black);
+  }
+
+  .investment-portfolio-block p {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 
 /* investment-offer */
@@ -68,11 +136,12 @@
 .investment-offer-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
 }
 .investment-offer-card {
-  width: 680px;
+  flex: 1 1 calc(50% - 10px); /* 2 карточки в ряд */
+  max-width: calc(50% - 10px);
   border-radius: 16px;
   padding: 20px 10px 20px 20px;
   background-color: var(--bg-color-white);
@@ -107,6 +176,26 @@
   border-radius: 16px;
   color: var(--text-color-white);
   background-color: var(--bg-color-nephritis);
+}
+
+@media (max-width: 1024px) {
+  .investment-offer-block h2 {
+    font-size: 40px;
+  }
+  .investment-offer-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .offer-card-title h3 {
+    font-size: 20px;
+  }
+  .offer-card-title img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* investment-values */
@@ -160,6 +249,55 @@
 
 .investment-values-card:not(:first-child) {
   margin-left: -40px; /* Вот ключевой момент */
+}
+
+@media (max-width: 1300px) {
+  .investment-values-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+  }
+
+  .investment-values-card:nth-child(4) {
+    margin-left: 0px; /* Вот ключевой момент */
+  }
+}
+
+@media (max-width: 1080px) {
+  .investment-values-card:nth-child(4) {
+    margin-left: -40px; /* Вот ключевой момент */
+  }
+}
+@media (max-width: 768px) {
+  .investment-values-title {
+    width: 100%;
+    font-size: 40px;
+  }
+  .investment-values-card:not(:first-child) {
+    margin-left: 0px; /* Вот ключевой момент */
+  }
+}
+
+@media (max-width: 425px) {
+  .investment-values-title {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .investment-values-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .investment-values-card img {
+    margin-bottom: 20px;
+  }
+  .investment-values-card h4 {
+    font-size: 25px;
+  }
+
+  .investment-values-card p {
+    font-size: 14px;
+  }
 }
 
 .expert-white,
