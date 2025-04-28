@@ -7,11 +7,11 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/investment.css" />
-    <link rel="stylesheet" href="assets/css/project-show.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="assets/css/project-show.css" />
   </head>
   <body>
     <!-- ===== Header Start ===== -->
@@ -32,7 +32,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Бизнес-маркет</a>
+                <a href="market.html" class="nav-link">Бизнес-маркет</a>
               </li>
               <li class="nav-item">
                 <a href="school.html" class="nav-link">Обучение</a>
@@ -88,7 +88,7 @@
             <h2 class="project-show-title">ОсОО Азия Фуд</h2>
 
             <div class="project-show-info">
-              <div class="project-show-slode-img">
+              <!-- <div class="project-show-slode-img">
                 <div class="project-show-slode-intro">
                   <img
                     src="assets/img/project-investment/image-slider.png"
@@ -121,6 +121,79 @@
                     src="assets/img/project-investment/image-slider.png"
                     alt=""
                   />
+                </div>
+              </div> -->
+
+              <div class="project-show-slode-img">
+                <!-- Большой слайдер -->
+                <div class="swiper main-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/project-investment/image-slider.png"
+                      alt=""" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/project-investment/image-slider.png"
+                      alt=""" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/project-investment/image-slider.png"
+                      alt=""" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/project-investment/image-slider.png"
+                      alt=""" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/project-investment/image-slider.png"
+                      alt=""" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Маленький слайдер миниатюр -->
+                <div class="thumbs-wrapper">
+                  <div class="swiper thumbs-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/img/project-investment/img-card.png"
+                        alt=""" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                        src="assets/img/project-investment/image-slider.png"
+                        alt=""" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev thumbs-prev"></div>
+                  <div class="swiper-button-next thumbs-next"></div>
                 </div>
               </div>
 
@@ -185,6 +258,27 @@
                   <div class="list-block">
                     <p class="list-block-text1">Номер телефона:</p>
                     <p class="list-block-text2">+996 550 887 654</p>
+                  </div>
+                </div>
+
+                <div class="project-show-info-btns">
+                  <div class="project-show-info-btn-block">
+                    <img src="assets/img/project-investment/phone.png" alt="" />
+                    <a
+                      href="tel:+996550887654"
+                      class="project-show-info-btn btn-p"
+                      >Позвонить</a
+                    >
+                  </div>
+
+                  <div class="project-show-info-btn-block">
+                    <img
+                      src="assets/img/project-investment/whatsapp .png"
+                      alt=""
+                    />
+                    <a href="#" class="project-show-info-btn btn-w"
+                      >Написать на WhatsApp</a
+                    >
                   </div>
                 </div>
               </div>
@@ -447,6 +541,9 @@
 
     <!-- ===== Footer End ===== -->
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/slider-project.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
