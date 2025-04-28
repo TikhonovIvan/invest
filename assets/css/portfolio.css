@@ -1,0 +1,168 @@
+.investment-portfolio-main {
+  background-color: #f5f5f5;
+}
+.investment-portfolio {
+  /* padding-bottom: 140px; */
+}
+.investment-portfolio-info {
+  display: flex;
+  justify-content: space-between;
+}
+.investment-portfolio-block {
+  margin-top: 64px;
+}
+.investment-portfolio-title {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  width: 790px;
+}
+
+.investment-portfolio-block p {
+  font-size: 20px;
+  width: 615px;
+  margin-bottom: 100px;
+}
+.investment-portfolio-btns {
+  display: flex;
+  gap: 16px;
+}
+.investment-portfolio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 60px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.investment-portfolio-btn.btn-1 {
+  color: var(--text-color-white);
+  background-color: var(--bg-color-nephritis);
+}
+
+.investment-portfolio-btn.btn-2 {
+  background-color: var(--bg-color-white);
+}
+
+.investment-portfolio-img {
+  width: 700px;
+  background: radial-gradient(
+    61.99% 61.99% at 50% 50%,
+    #21836d 0%,
+    #f5f5f5 61.67%
+  );
+}
+
+/* investment-offer */
+
+.investment-offer {
+  padding: 100px 0;
+}
+
+.investment-offer-block h2 {
+  margin-bottom: 40px;
+}
+
+.investment-offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+.investment-offer-card {
+  width: 680px;
+  border-radius: 16px;
+  padding: 20px 10px 20px 20px;
+  background-color: var(--bg-color-white);
+}
+.offer-card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.offer-card-title img {
+  width: 70px;
+  height: 70px;
+}
+.offer-card-title h3 {
+  font-size: 30px;
+  font-weight: 600;
+  width: 300px;
+  height: 90px;
+}
+.offer-card-body {
+  margin-bottom: 30px;
+}
+.offer-card-body-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.offer-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border-radius: 16px;
+  color: var(--text-color-white);
+  background-color: var(--bg-color-nephritis);
+}
+
+/* investment-values */
+
+.investment-values {
+  padding: 100px 0;
+}
+
+.investment-values-block {
+}
+.investment-values-title {
+  width: 700px;
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+.investment-values-text {
+  font-size: 18px;
+  margin-bottom: 55px;
+}
+.investment-values-cards {
+  display: flex;
+  align-items: center;
+}
+.investment-values-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  height: 380px;
+  background: var(--bg-color-white);
+  border: 1px solid #6da89b;
+  border-radius: 300px;
+}
+
+.investment-values-card img {
+  margin-bottom: 43px;
+}
+.investment-values-card h4 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.investment-values-card p {
+  width: 190px;
+  margin-top: 10px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.investment-values-card:not(:first-child) {
+  margin-left: -40px; /* Вот ключевой момент */
+}
+
+.expert-white,
+.reviews-white {
+  background-color: var(--bg-color-white);
+}
