@@ -267,6 +267,107 @@
   }
 }
 
+/* charity-info-form { */
+
+.charity-info-form {
+  background-color: #7cb4a7;
+  padding: 100px 0;
+}
+
+.charity-info-form-block {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.charity-info-form-body {
+  width: 600px;
+}
+
+.charity-info-form-body h2 {
+  margin-bottom: 20px;
+}
+.charity-info-form-body p {
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.charity-info-forms {
+  padding: 40px;
+  width: 750px;
+  border-radius: 28px;
+  background-color: var(--bg-color-white);
+}
+
+.forms-wrapper-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.charity-info-form-lable {
+  display: flex;
+  gap: 16px;
+}
+.charity-info-form-lable input,
+.charity-info-form-lable textarea {
+  width: 100%;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  background-color: #f5f5f5;
+  padding-left: 30px;
+}
+
+.charity-info-form-lable textarea {
+  padding-top: 10px;
+  font-family: "Inter", sans-serif;
+}
+.charity-info-form-button button {
+  width: 100%;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 600;
+  color: var(--bg-color-white);
+  background-color: var(--bg-color-nephritis);
+}
+
+.forms-wrapper-block input:focus,
+.charity-info-form-lable textarea:focus {
+  outline: none;
+  border: 2px solid var(--bg-color-nephritis);
+}
+
+@media (max-width: 1024px) {
+  .charity-info-form-body h2 {
+    font-size: 40px;
+  }
+  .charity-info-form-block {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .charity-info-forms {
+    width: 100%;
+  }
+  .charity-info-form-body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .charity-info-form-lable {
+    flex-direction: column;
+  }
+  .charity-info-forms {
+    padding: 10px;
+  }
+
+  .charity-info-form-lable input,
+  .charity-info-form-lable textarea {
+    padding-left: 10px;
+  }
+}
+
 /* story-users-info */
 
 .story-users-info {
