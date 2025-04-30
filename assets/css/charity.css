@@ -1,12 +1,16 @@
-:root {
-  --text-color-black: #000;
-  --text-color-nephritis: #21836d;
-  --text-color-white: #fff;
+.size-32px {
+  font-size: 32px;
+  font-weight: 500;
+}
 
-  --bg-color-nephritis: #21836d;
-  --bg-color-white: #fff;
-  --bg-color-gray: #f2f2f2;
-  --bg-color-black: #000;
+.quote {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #0a0a0a;
+  margin-top: 60px;
+
+  font-style: italic;
 }
 
 .charity {
@@ -53,6 +57,32 @@
     #f5f5f5 61.67%
   );
 }
+@media (max-width: 1024px) {
+  .charity-info {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .charity-info-img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .charity-info-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .charity-info-title {
+    font-size: 40px;
+  }
+  .charity-info-btn {
+    width: 100%;
+  }
+}
 
 /* good-info  */
 
@@ -88,6 +118,17 @@
 }
 .good-info-card-text {
   font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .good-info-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .good-info-title {
+    font-size: 30px;
+  }
 }
 
 /*For-what-info  */
@@ -135,7 +176,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 315px;
+  width: 100%;
   height: 220px;
   background: #f5f5f5;
   background-image: url(../img/school/bg-car.png);
@@ -146,6 +187,21 @@
 }
 
 .for-what-info-card-img img {
+}
+
+@media (max-width: 992px) {
+  .for-what-info-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .for-what-info-title {
+    font-size: 35px;
+  }
+
+  .for-what-info-card {
+    width: 100%;
+  }
 }
 
 /* participate-info*/
@@ -182,11 +238,96 @@
   background-image: url(../img/charity/vector.png);
   background-repeat: no-repeat;
 
-  width: 433px;
+  width: 100%;
   border-radius: 20px;
   margin-bottom: 30px;
 }
 .participate-info-card-body {
-  padding-left: 10px;
+  padding: 0 10px;
   width: 350px;
+}
+
+@media (max-width: 992px) {
+  .participate-info-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .participate-info-card {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .participate-info-title {
+    font-size: 30px;
+  }
+  .participate-info-card-body {
+    width: 100%;
+  }
+}
+
+/* story-users-info */
+
+.story-users-info {
+}
+
+.story-users-info-block {
+}
+.story-users-info-title {
+  margin-bottom: 16px;
+}
+
+.story-users-info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 80px;
+}
+.story-users-info-card {
+  border-radius: 30px;
+
+  background-color: var(--bg-color-white);
+  padding: 10px 10px 20px 10px;
+  width: 335px;
+}
+.story-users-info-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  background-image: url(../img/charity/vector2.png);
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.story-users-info-card-body {
+  padding: 0 10px;
+}
+.story-users-info-card-project {
+}
+.story-users-info-card-text {
+}
+
+@media (max-width: 992px) {
+  .story-users-info-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .story-users-info-title {
+    font-size: 35px;
+  }
+}
+
+/*кастомные*/
+@media (max-width: 425px) {
+  .size-32px {
+    font-size: 25px;
+  }
+  .quote {
+    font-size: 18px;
+  }
 }
