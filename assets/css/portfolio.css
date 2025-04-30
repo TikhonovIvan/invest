@@ -113,9 +113,6 @@
     font-size: 25px;
     color: var(--text-color-black);
   }
-  .title-nephritis {
-    color: var(--text-color-black);
-  }
 
   .investment-portfolio-block p {
     font-size: 16px;
@@ -238,10 +235,11 @@
 .investment-values-card h4 {
   font-size: 32px;
   font-weight: 600;
+  text-align: center;
 }
 
 .investment-values-card p {
-  width: 190px;
+  width: 220px;
   margin-top: 10px;
   opacity: 0.5;
   text-align: center;
