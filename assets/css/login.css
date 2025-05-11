@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  height: 130vh;
+  height: 140vh;
 }
 
 .logo-form a {
@@ -202,36 +202,3 @@
     font-size: 14px;
   }
 }
-/* 
-
-@media (max-width: 600px) {
-}
-@media (max-width: 600px) {
-  .login-form h2 {
-    font-size: 40px;
-  }
-  .login {
-    background-image: none;
-  }
-  .form-block {
-    width: 100%;
-  }
-  .input-wrapper {
-    width: 100%;
-  }
-
-  .form-block a {
-    color: var(--text-color-nephritis);
-  }
-  .form-block button {
-    width: 100%;
-    background-color: var(--bg-color-nephritis);
-  }
-
-  .form-block a {
-    margin-bottom: 10px;
-  }
-  .no-account {
-    margin-top: 20px;
-  }
-} */
