@@ -157,8 +157,8 @@
 
 @media (max-width: 768px) {
   .login {
+    background-position: center;
     background-size: cover;
-    height: 100vh;
   }
   .form-block button {
     background-color: var(--bg-color-nephritis);
@@ -175,6 +175,9 @@
     border-radius: 16px;
     padding: 40px 20px;
     width: 100%;
+  }
+  .login-page {
+    padding-bottom: 200px;
   }
   .form-block button,
   .input-wrapper select,
