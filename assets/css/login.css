@@ -158,8 +158,7 @@
 @media (max-width: 768px) {
   .login {
     background-size: cover;
-    height: 100%;
-    padding-bottom: 100px;
+    height: 100vh;
   }
   .form-block button {
     background-color: var(--bg-color-nephritis);
