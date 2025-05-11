@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  height: 140vh;
+  height: 130vh;
 }
 
 .logo-form a {
@@ -159,6 +159,8 @@
   .login {
     background-position: center;
     background-size: cover;
+    height: 100%;
+    padding-bottom: 200px;
   }
   .form-block button {
     background-color: var(--bg-color-nephritis);
