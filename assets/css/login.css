@@ -3,8 +3,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  height: 100vh;
-  padding-bottom: 100px;
+  height: 130vh;
 }
 
 .logo-form a {
@@ -33,11 +32,8 @@
   display: flex;
   flex-direction: column;
   width: 478px;
-}
-
-.form-block {
   position: relative;
-  gap: 20px;
+  gap: 15px;
 }
 
 .input-wrapper {
@@ -54,6 +50,25 @@
   border-radius: 12px;
   cursor: pointer;
 }
+.input-wrapper select {
+  width: 478px;
+  height: 60px;
+  padding-left: 52px;
+  padding-right: 22px;
+  background-color: #f5f5f5;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding-right: 30px; /* Место под стрелку */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../img/login/arrow-down.svg"); /* Ваша стрелка */
+  background-repeat: no-repeat;
+  background-position: right 22px center; /* Сдвигает стрелку на 22px от правого края */
+  background-size: 16px; /* Размер стрелки */
+}
 
 .input-wrapper input:focus {
   outline: none;
@@ -62,11 +77,11 @@
 
 .input-wrapper img {
   position: absolute;
-  left: 12px;
+  left: 18px;
   top: 50%;
   transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
 }
 
 .form-block a {
@@ -102,7 +117,7 @@
 }
 
 .form-block-text {
-  font-weight: 6000;
+  font-weight: 600;
 }
 
 .account {
@@ -116,11 +131,10 @@
   color: var(--text-color-black) !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .form-block a {
     color: var(--text-color-black);
   }
-
   .form-block button {
     background-color: var(--bg-color-black);
   }
@@ -130,7 +144,66 @@
     color: var(--text-color-black);
   }
 }
+@media (max-width: 992px) {
+  .form-block a {
+    color: var(--text-color-black);
+  }
 
+  .no-account a {
+    text-decoration: underline;
+    color: var(--text-color-black);
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+  .form-block button {
+    background-color: var(--bg-color-nephritis);
+  }
+  .logo-form span,
+  .logo-form a {
+    color: var(--text-color-white);
+  }
+  .logo-form span {
+    border-bottom: 1px solid var(--text-color-white);
+  }
+  .form-block {
+    background-color: var(--bg-color-white);
+    border-radius: 16px;
+    padding: 40px 20px;
+    width: 100%;
+  }
+  .form-block button,
+  .input-wrapper select,
+  .input-wrapper input {
+    width: 100%;
+  }
+  .form-block a {
+    color: var(--text-color-nephritis);
+  }
+}
+@media (max-width: 600px) {
+  .login-form h2 {
+    font-size: 30px;
+  }
+  .form-block-text {
+    font-size: 12px;
+  }
+  .input-wrapper select {
+    font-size: 14px;
+  }
+  .input-wrapper input::placeholder {
+    font-size: 14px;
+  }
+}
+/* 
+
+@media (max-width: 600px) {
+}
 @media (max-width: 600px) {
   .login-form h2 {
     font-size: 40px;
@@ -144,9 +217,7 @@
   .input-wrapper {
     width: 100%;
   }
-  .input-wrapper input {
-    width: 100%;
-  }
+
   .form-block a {
     color: var(--text-color-nephritis);
   }
@@ -161,4 +232,4 @@
   .no-account {
     margin-top: 20px;
   }
-}
+} */
