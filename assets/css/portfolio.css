@@ -215,9 +215,14 @@
 }
 .investment-values-cards {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  position: relative;
 }
 .investment-values-card {
+  position: relative;
+  z-index: 2; /* По умолчанию все поверх */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,15 +258,20 @@
   .investment-values-cards {
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 40px;
   }
 
+  .investment-values-card:nth-child(3),
   .investment-values-card:nth-child(4) {
     margin-left: 0px; /* Вот ключевой момент */
+    margin-top: -60px;
+    z-index: 1;
   }
 }
 
 @media (max-width: 1080px) {
+  .investment-values {
+    padding: 40px 0;
+  }
   .investment-values-card:nth-child(4) {
     margin-left: -40px; /* Вот ключевой момент */
   }
@@ -277,6 +287,9 @@
 }
 
 @media (max-width: 425px) {
+  .investment-values {
+    padding: 40px 0;
+  }
   .investment-values-title {
     font-size: 25px;
     line-height: 1.2;

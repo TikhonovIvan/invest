@@ -6,8 +6,7 @@
   display: flex;
   justify-content: space-between;
 }
-.consulting-info-body {
-}
+
 .consulting-info-title {
   margin-bottom: 36px;
 }
@@ -45,16 +44,42 @@
   .consulting-info {
     padding-top: 130px;
   }
+  .consulting-info-img {
+    text-align: center;
+  }
   .consulting-info-img img {
-    display: none;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .consulting-info {
+    padding: 120px 0 40px 0;
   }
   .consulting-info-block {
-    background-image: url(../img/consulting/bg.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .consulting-info-title {
+    margin-bottom: 20px;
+  }
+
+  .consulting-info-text {
+    margin-bottom: 80px;
+  }
+
+  .consulting-info-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .consulting-info-btns {
+    justify-content: center;
+  }
+
+  .consulting-info-img img {
+    width: 60%;
   }
 }
 
@@ -67,6 +92,12 @@
   }
   .consulting-info-btn {
     width: 100%;
+  }
+  .consulting-info-img img {
+    width: 100%;
+  }
+  .consulting-info-text {
+    margin-bottom: 20px;
   }
 }
 
@@ -134,12 +165,27 @@
 }
 
 @media (max-width: 768px) {
+  .model-info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-between;
+  }
+  .model-info {
+    padding: 40px 0 40px 0;
+    background: #7cb4a7;
+  }
+
   .model-info-title {
     font-size: 40px;
     margin-bottom: 65px;
   }
+  .model-info-img {
+    text-align: center;
+  }
   .model-info-img img {
-    display: none;
+    width: 80%;
   }
   .model-info-number p:first-child {
     color: var(--bg-color-white);
@@ -182,7 +228,7 @@
 }
 .expertise-info-item {
   display: flex;
-
+  justify-content: space-between;
   color: var(--text-color-nephritis);
   font-weight: 500;
   font-size: 30px;
@@ -191,15 +237,21 @@
   border-bottom: 1px solid #d7d7d7;
 }
 
-.expertise-info-item p:nth-child(1) {
+.expertise-info-boxs {
+  display: flex;
+}
+
+.expertise-info-boxs p:nth-child(1) {
+  font-size: 30px;
   width: 173px;
+  color: var(--text-color-nephritis);
 }
-.expertise-info-item p:nth-child(2) {
-  width: 422px;
-  margin-right: 178px;
+.expertise-info-boxs p:nth-child(2) {
+  font-size: 30px;
+  width: 620px;
+  color: var(--text-color-nephritis);
 }
-.expertise-info-item p:nth-child(3) {
-  width: 466px;
+.expertise-info-item p {
   color: var(--text-color-black);
   font-size: 16px;
 }
@@ -207,13 +259,44 @@
 .opacity-0 {
   opacity: 0.5;
 }
+@media (max-width: 1024px) {
+  .expertise-info-boxs p:nth-child(1) {
+    font-size: 30px;
+    width: 120px;
+    color: var(--text-color-nephritis);
+  }
+  .expertise-info-boxs p:nth-child(2) {
+    font-size: 30px;
+    width: 400px;
+    color: var(--text-color-nephritis);
+  }
+}
 
 @media (max-width: 768px) {
-  .expertise-info-item p:nth-child(2) {
-    width: 422px;
-    margin-right: 30px;
+  .expertise-info {
+    padding: 100px 0 60px 0;
+  }
+  .expertise-info {
+    padding: 60px 0 40px 0;
+  }
+
+  .expertise-info-boxs {
+    display: flex;
+    gap: 10px;
+  }
+  .expertise-info-boxs p:nth-child(1) {
+    width: 19px;
+    margin-right: 20px;
+  }
+  .expertise-info-boxs p:nth-child(2) {
+    font-size: 30px;
+    width: 100%;
+  }
+  .expertise-info-boxs p:nth-child(2) {
   }
   .expertise-info-item {
+    flex-direction: column;
+    row-gap: 20px;
     font-size: 20px;
   }
   .expertise-info-title {
@@ -221,7 +304,10 @@
     margin-bottom: 60px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
+  .expertise-info {
+    padding: 40px 0 40px 0;
+  }
   .expertise-info-title {
     font-size: 25px;
   }
@@ -229,20 +315,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
-    text-align: center;
   }
 
-  .expertise-info-item p:nth-child(1) {
-    width: 100%;
+  .expertise-info-boxs p:nth-child(1) {
+    font-size: 20px;
   }
-  .expertise-info-item p:nth-child(2) {
-    width: 100%;
-    margin-right: 0;
+  .expertise-info-boxs p:nth-child(2) {
+    font-size: 20px;
   }
 
-  .expertise-info-item p:nth-child(3) {
-    width: 100%;
+  .expertise-info-boxs {
+    display: flex;
   }
 }
 
