@@ -351,9 +351,6 @@ body {
   }
 }
 
-@media (max-width: 427px) {
-}
-
 /* main */
 .investor-info {
   background-color: #f6f7f8 !important;
@@ -405,28 +402,30 @@ body {
 }
 
 .card-2 {
-  background-image: url(../img/line2.svg);
+  background-image: url(../img/index/line2.svg);
   background-repeat: no-repeat;
 }
 
 .card-1 {
-  background-image: url(../img/line1.svg);
+  background-image: url(../img/index/line1.svg);
   background-repeat: no-repeat;
 }
 
 .investor-info {
-  background: url(../img/bg2.svg) no-repeat center top -70px;
+  background: url(../img/index/bg2.svg);
+  background-repeat: no-repeat;
+  background-position: center top -70px;
 }
 
 @media (max-width: 1024px) {
   .investor-info {
-    padding-top: 150px;
-    background-size: 100%;
-    background-position: center top 70px;
+    padding-top: 120px;
+    background-size: 120%;
+    background-position: center top 200px;
   }
 
   .investor-info-title {
-    margin-bottom: 200px; /*390*/
+    margin-bottom: 390px; /*390*/
   }
   .investor-info-cards {
     display: flex;
@@ -437,7 +436,10 @@ body {
 
 @media (max-width: 768px) {
   .investor-info {
-    background-size: 0%;
+    background: url(../img/index/bg3.svg);
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: left -90px top 200px;
   }
   .investor-info-title h1 {
     font-size: 40px;
@@ -452,23 +454,59 @@ body {
     height: 100%;
     padding: 40px 60px 40px 40px;
   }
+  .investor-info-title {
+    margin-bottom: 390px; /*390*/
+  }
 
   .card-1 {
-    background-image: url(../img/line3.svg);
     background-position: center bottom;
+    background-repeat: no-repeat;
   }
   .card-2 {
     background-position: center bottom;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
+  .investor-info {
+    background: url(../img/index/bg3.svg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: left -90px top 280px;
+  }
+  .card-1 {
+    background-image: url(../img/index/l1.svg);
+    background-repeat: no-repeat;
+    background-position: left -60px top -15px;
+  }
+  .card-2 {
+    background-image: url(../img/index/l2.svg);
+    background-repeat: no-repeat;
+
+    background-position: right -100px top 10px;
+  }
+}
+
+@media (max-width: 426px) {
   .investor-info-title h1 {
-    font-size: 30px;
+    font-size: 32px;
+  }
+  .investor-info {
+    background: url(../img/index/bg3.svg);
+    background-repeat: no-repeat;
+    background-position: left -90px top 280px;
   }
 
   .investor-info-card {
     padding: 20px;
+  }
+
+  /* .investor-info {
+    background-image: url(../img/bg2.svg);
+    background-size: 800px;
+  } */
+  .investor-info-text {
+    font-size: 14px;
   }
 }
 
@@ -617,10 +655,39 @@ body {
 .statistics-card p {
   font-size: 20px;
 }
+@media (max-width: 768px) {
+  .statistics-card h4 {
+    font-size: 50px;
+
+    margin-bottom: 40px;
+  }
+  .statistics-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .statistics-card-img {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 @media (max-width: 425px) {
   .statistics-block h2 {
     font-size: 40px;
+  }
+
+  .statistics-card p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .statistics-card h4 {
+    font-size: 45px;
+  }
+
+  .statistics-card p {
+    font-size: 14px;
   }
 }
 
@@ -797,7 +864,7 @@ body {
   .copyright {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 15px;
   }
 
@@ -807,21 +874,29 @@ body {
 }
 @media (max-width: 610px) {
   .footer-block {
-    margin-bottom: 40px;
+    flex-direction: column;
+    margin-bottom: 30px;
   }
+
   .nav-contact {
     flex-direction: column;
   }
 
   .contact {
     margin-left: 0px;
+    margin-top: 30px;
+  }
+  .f-nav-list {
+    justify-content: space-between;
+    columns: 2;
+    column-gap: 20px; /* расстояние между колонками */
   }
 }
 
 @media (max-width: 425px) {
-  .f-nav-list {
+  /* .f-nav-list {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-  }
+  } */
 }
