@@ -29,13 +29,23 @@ function boxHandler(e) {
 
 
 const links = document.querySelectorAll('.nav-link');
-  const currentUrl = window.location.pathname;
+const currentUrl = window.location.pathname;
+const currentPage = currentUrl.split('/').pop(); // Получаем текущую страницу (например, "consulting.html")
 
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentUrl.split('/').pop()) {
-      link.classList.add('active');
+links.forEach(link => {
+  link.classList.remove('active'); // Сначала сбрасываем все активные состояния
+  
+  // Если ссылка ведёт на текущую страницу — добавляем "active"
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+    
+    // Если активная ссылка внутри dropdown-меню, подсвечиваем родительский пункт "Консалтинг"
+    const dropdownParent = link.closest('.dropdown-menu')?.previousElementSibling;
+    if (dropdownParent && dropdownParent.classList.contains('dropdown-toggle')) {
+      dropdownParent.classList.add('active');
     }
-  });
+  }
+});
 
 // выпадающий список 
 document.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
