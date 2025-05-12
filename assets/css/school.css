@@ -260,12 +260,13 @@
   position: relative;
 }
 
+.article-navigation,
 .expert-navigation {
   display: flex;
   gap: 10px;
 }
 
-.custom-swiper-button {
+/* .custom-swiper-button {
   width: 40px;
   height: 40px;
   border: 1px solid var(--bg-color-nephritis);
@@ -273,18 +274,18 @@
   background: white;
   position: relative;
   cursor: pointer;
-}
+} */
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.expert-button-prev::after,
+.expert-button-next::after {
   font-size: 16px;
   font-weight: 600;
   color: var(--bg-color-nephritis);
 }
 
 /* Чтобы кнопки не убегали */
-.swiper-button-prev,
-.swiper-button-next {
+.expert-button-prev,
+.expert-button-next {
   position: static;
 }
 
@@ -316,7 +317,7 @@
 
 @media (max-width: 425px) {
   .expert-card {
-    width: 290px;
+    width: 100%;
   }
   .expert-img img {
     width: 100%;
@@ -330,18 +331,13 @@
 /* article  */
 
 .article {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .article-block-title {
   margin-bottom: 60px;
 }
 
-.article-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
 .article-card {
   width: 335px;
 }
@@ -360,6 +356,26 @@
 .article-card a {
   font-weight: 600;
   color: var(--text-color-nephritis);
+}
+
+/*слайдер*/
+.article-block-heder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-button-prev::after,
+.article-button-next::after {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-color-nephritis);
+}
+
+/* Чтобы кнопки не убегали */
+.article-button-prev,
+.article-button-next {
+  position: static;
 }
 
 @media (max-width: 1390px) {
