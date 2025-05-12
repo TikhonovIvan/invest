@@ -121,16 +121,16 @@ body {
   z-index: 50;
   align-items: center;
   justify-content: flex-end;
-  width: 40px;
+  width: 32px;
   height: 18px;
 }
 
 .burger span {
   height: 2px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   transform: scale(1);
-  background-color: var(--bg-color-nephritis);
+  background-color: #1c274c;
 }
 
 .burger::before,
@@ -139,7 +139,7 @@ body {
   position: absolute;
   height: 2px;
   width: 100%;
-  background-color: var(--bg-color-nephritis);
+  background-color: #1c274c;
   transition: all 0.3s ease 0s;
 }
 
@@ -158,17 +158,70 @@ body {
 
 .burger.active::before {
   top: 50%;
+  background-color: #bdbdbd;
   transform: rotate(-45deg) translate(0, -50%);
 }
 
 .burger.active::after {
   bottom: 50%;
+  background-color: #bdbdbd;
   transform: rotate(45deg) translate(0, 50%);
 }
 
 .open {
   display: flex !important;
 }
+.logo.logo-menu {
+  display: none;
+}
+.nav-link.active {
+  color: var(--text-color-nephritis);
+}
+
+/*Выпадающий список*/
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  width: 180px;
+  border-radius: 12px;
+  padding: 10px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  background-color: var(--bg-color-nephritis);
+}
+.dropdown-menu li:first-child {
+  margin-bottom: 5px;
+}
+
+.dropdown.open .dropdown-menu {
+  display: flex; /* показываем список при открытии */
+}
+
+.dropdown-item {
+  font-size: 14px;
+  color: var(--text-color-white);
+}
+.dropdown-item:hover {
+  color: var(--text-color-black);
+}
+
+/* Кнопка "Консалтинг" со стрелкой */
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
 /* Мобильная версия end*/
 
 /*Header адаптивность*/
@@ -184,7 +237,6 @@ body {
 
   .header {
     position: fixed;
-
     left: 0;
     right: 0;
     z-index: 60;
@@ -196,7 +248,7 @@ body {
     position: fixed;
     height: 25%;
     width: 100%;
-    top: 90px;
+    top: 89px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -222,30 +274,84 @@ body {
   .header-bnt {
     display: none;
   }
+
+  .logo.logo-menu {
+    display: block;
+    padding-bottom: 10px;
+  }
+
   .header-bnt-menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-    padding-top: 20px;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 15px;
+    margin-top: 100px;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .nav {
-    height: 40%;
+    height: 100%;
+    top: 0px;
+    padding: 20px;
+    padding-top: 65px;
   }
 
   .nav .nav-list {
-    justify-content: center;
-    row-gap: 20px;
+    display: block;
+    margin: 0;
+  }
+  .nav-item {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /*Выпадающий список*/
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    position: static;
+    display: none;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 8px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--bg-color-white);
+  }
+
+  .dropdown-menu li:first-child {
+    margin-bottom: 15px;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex; /* показываем список при открытии */
+  }
+
+  .dropdown-item {
+    font-size: 20px;
+
+    color: var(--text-color-black);
+  }
+
+  .dropdown-item:hover {
+    text-decoration: underline;
+  }
+
+  /* Кнопка "Консалтинг" со стрелкой */
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 427px) {
-  .nav {
-    height: 60%;
-  }
 }
 
 /* main */

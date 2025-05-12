@@ -28,3 +28,29 @@ function boxHandler(e) {
 }
 
 
+const links = document.querySelectorAll('.nav-link');
+  const currentUrl = window.location.pathname;
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentUrl.split('/').pop()) {
+      link.classList.add('active');
+    }
+  });
+
+// выпадающий список 
+document.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    const parent = this.parentElement;
+    const arrowImg = this.querySelector('img');
+    
+    parent.classList.toggle('open');
+    
+    // Меняем изображение в зависимости от состояния
+    if (parent.classList.contains('open')) {
+        arrowImg.src = "assets/img/login/r2.svg"; // стрелка вверх или другая картинка
+    } else {
+        arrowImg.src = "assets/img/login/r1.svg"; // исходная картинка
+    }
+});
+
+
