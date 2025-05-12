@@ -116,6 +116,11 @@
 }
 .pagination-arrow {
   display: none;
+  padding: 8px 15px;
+  height: 40px;
+
+  border-radius: 10px;
+  border: 1px solid var(--bg-color-nephritis);
   color: var(--bg-color-nephritis);
 }
 
@@ -195,6 +200,7 @@
 }
 .market-card-info-body {
   display: flex;
+  justify-content: space-between;
 }
 .market-card-info-text {
   font-size: 12px;
