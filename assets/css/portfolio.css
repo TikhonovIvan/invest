@@ -215,7 +215,7 @@
 }
 .investment-values-cards {
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: center;
 
   position: relative;
@@ -260,9 +260,16 @@
     justify-content: center;
   }
 
-  .investment-values-card:nth-child(3),
   .investment-values-card:nth-child(4) {
     margin-left: 0px; /* Вот ключевой момент */
+    margin-top: -60px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .investment-values-card:nth-child(3) {
+    margin-left: 0px;
     margin-top: -60px;
     z-index: 1;
   }
@@ -277,37 +284,110 @@
   }
 }
 @media (max-width: 768px) {
-  .investment-values-title {
-    width: 100%;
-    font-size: 40px;
-  }
-  .investment-values-card:not(:first-child) {
-    margin-left: 0px; /* Вот ключевой момент */
-  }
-}
-
-@media (max-width: 425px) {
-  .investment-values {
-    padding: 40px 0;
-  }
-  .investment-values-title {
-    font-size: 25px;
-    line-height: 1.2;
-  }
   .investment-values-card {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 
   .investment-values-card img {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .investment-values-card h4 {
-    font-size: 25px;
+    font-size: 16px;
   }
 
   .investment-values-card p {
     font-size: 14px;
+  }
+  .investment-values-title {
+    width: 100%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .investment-values {
+    padding: 40px 0;
+  }
+  .investment-values-card:nth-child(3),
+  .investment-values-card:nth-child(4) {
+    margin-top: -45px;
+  }
+  .investment-values-card {
+    width: 215px;
+    height: 215px;
+  }
+  .investment-values-card p {
+    font-size: 14px;
+    width: 149px;
+  }
+}
+
+@media (max-width: 426px) {
+  .investment-values-text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .investment-values-card {
+    width: 199px;
+    height: 206px;
+  }
+  .investment-values-card img {
+    width: 32px;
+    height: 32px;
+  }
+  .investment-values-card p {
+    font-size: 10px;
+    width: 149px;
+  }
+
+  .investment-values {
+    padding: 40px 0;
+  }
+
+  .investment-values-title {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+.expert-white,
+.reviews-white {
+  background-color: var(--bg-color-white);
+}
+
+@media (max-width: 376px) {
+  .investment-values-card:nth-child(3),
+  .investment-values-card:nth-child(4) {
+    margin-top: -35px;
+  }
+  .investment-values-text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .investment-values-card {
+    width: 165px;
+    height: 170px;
+  }
+
+  .investment-values-card h4 {
+    font-size: 14px;
+  }
+  .investment-values-card img {
+    width: 32px;
+    height: 32px;
+  }
+  .investment-values-card p {
+    width: 130px;
+  }
+
+  .investment-values {
+    padding: 40px 0;
+  }
+
+  .investment-values-title {
+    font-size: 25px;
+    line-height: 1.2;
   }
 }
 

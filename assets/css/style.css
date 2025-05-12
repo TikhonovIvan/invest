@@ -774,6 +774,9 @@ body {
 }
 
 @media (max-width: 425px) {
+  .questions {
+    padding: 40px 0;
+  }
   .questions-block h2 {
     font-size: 30px;
     text-align: center;
