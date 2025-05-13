@@ -183,21 +183,46 @@
 
                     <div class="invest-block-ur-name">
                       <h4 class="invest-title-block">
-                        Юридическое наименование компании*
+                        Юридическое наименование компании
+                        <span class="title-nephritis">*</span>
                       </h4>
                       <input
                         type="text"
-                        placeholder="Например, ООО “Ромашка”"
+                        placeholder=" ООО “Ромашка”"
                         required
                       />
                       <p class="invest-text-info-block">
                         Например, ООО “Ромашка”
                       </p>
                     </div>
+
+                    <div class="invest-block-uch-number">
+                      <h4 class="invest-title-block">
+                        Сколько учредителей в компании?
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <div class="input-wrapper">
+                        <button type="button" class="circle-btn" id="decrement">
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          id="foundersCount"
+                          value="1"
+                          min="1"
+                          placeholder="ООО “Ромашка”"
+                          required
+                        />
+                        <button type="button" class="circle-btn" id="increment">
+                          +
+                        </button>
+                      </div>
+                      <p class="invest-text-info-block">
+                        Обычно это лица, указанные в учредительных документах
+                      </p>
+                    </div>
                   </div>
 
-                  <input type="text" placeholder="Название проекта" required />
-                  <input type="text" placeholder="Описание" required />
                   <button type="button" class="next-btn mobile-only">
                     Продолжить
                   </button>
@@ -350,5 +375,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/create-post.js"></script>
     <script src="assets/js/add-images.js"></script>
+    <script src="assets/js/number-input.js"></script>
   </body>
 </html>

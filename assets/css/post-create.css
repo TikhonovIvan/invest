@@ -109,11 +109,12 @@
 
 input {
   display: block;
+  padding: 19px;
   margin: 10px 0;
-  padding: 8px;
   width: 100%;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 12px;
+  border: 1px solid #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 /*Прогресс бар справа на ПК*/
@@ -418,4 +419,57 @@ input {
 
 .add-images-imfo {
   font-size: 14px;
+}
+
+/*invest-block-ur-name*/
+.invest-block-ur-name input {
+}
+.invest-title-block {
+}
+.invest-text-info-block {
+}
+
+/*invest-block-uch-number*/
+.invest-block-uch-number input {
+  text-align: center;
+
+  color: #626975;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+input[type="number"] {
+  width: 100%;
+  max-width: 96px;
+  height: 60px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #f5f5f5;
+}
+
+.circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circle-btn:hover {
+  background-color: var(--bg-color-nephritis);
+  color: var(--bg-color-white);
+}
+/* скрытия стрело*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
