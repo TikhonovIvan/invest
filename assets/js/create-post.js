@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   const tabs = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".tab-content");
-  const progressFill = document.querySelectorAll(".progress-fill");
+  const segments = document.querySelectorAll(".progress-segment");
   const circles = document.querySelectorAll(".circle");
   const stepCount = document.querySelectorAll(".step-count");
 
@@ -64,9 +64,14 @@ window.addEventListener("load", function () {
     }
 
     // Обновление прогресс-бара
-    progressFill.forEach((bar) => {
-      bar.style.width = `${(completedSteps / 3) * 100}%`;
-    });
+   
+segments.forEach((segment, i) => {
+  if (i < completedSteps) {
+    segment.classList.add("active");
+  } else {
+    segment.classList.remove("active");
+  }
+});
 
     // Обновление номера текущего шага
     stepCount.forEach((el) => {

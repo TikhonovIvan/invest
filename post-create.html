@@ -152,14 +152,57 @@
             <div class="content-container">
               <!-- Инвестиция -->
               <form id="invest" class="tab-content active">
-                <div class="form-step" data-step="1">
+                <div class="form-step form-block-1" data-step="1">
                   <h2>1. Основная информация</h2>
+
+                  <div class="invest-wrapper-blocks">
+                    <div class="invest-block-images">
+                      <h4 class="invest-title-block">Фото проекта</h4>
+                      <p class="invest-text-info-block">
+                        Загрузите фото компании, продукта или помещения.
+                      </p>
+                      <div class="add-images" id="imageContainer">
+                        <label class="custom-file-upload">
+                          <input
+                            type="file"
+                            id="imageInput"
+                            accept="image/*"
+                            multiple
+                          />
+                          <div class="upload-placeholder">
+                            <div class="plus">+</div>
+                            <div class="text">Добавить фото</div>
+                          </div>
+                        </label>
+                      </div>
+
+                      <p class="add-images-imfo">
+                        Можно добавить до 20 изображений
+                      </p>
+                    </div>
+
+                    <div class="invest-block-ur-name">
+                      <h4 class="invest-title-block">
+                        Юридическое наименование компании*
+                      </h4>
+                      <input
+                        type="text"
+                        placeholder="Например, ООО “Ромашка”"
+                        required
+                      />
+                      <p class="invest-text-info-block">
+                        Например, ООО “Ромашка”
+                      </p>
+                    </div>
+                  </div>
+
                   <input type="text" placeholder="Название проекта" required />
                   <input type="text" placeholder="Описание" required />
                   <button type="button" class="next-btn mobile-only">
                     Продолжить
                   </button>
                 </div>
+
                 <div class="form-step hidden" data-step="2">
                   <h2>2. Финансовые параметры</h2>
                   <input type="number" placeholder="Инвестиции, ₽" required />
@@ -209,6 +252,11 @@
               <!-- Прогресс (десктоп) -->
               <div class="progress-box desktop-progress">
                 <h3>Шаг <span class="step-count">1</span> из 3</h3>
+                <div class="progress-bar">
+                  <div class="progress-segment" data-index="1"></div>
+                  <div class="progress-segment" data-index="2"></div>
+                  <div class="progress-segment" data-index="3"></div>
+                </div>
                 <ul>
                   <li>
                     <span class="circle" data-step="1">&#10003;</span> Основная
@@ -223,9 +271,6 @@
                     Контактная информация
                   </li>
                 </ul>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 0%"></div>
-                </div>
               </div>
             </div>
 
@@ -304,5 +349,6 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/create-post.js"></script>
+    <script src="assets/js/add-images.js"></script>
   </body>
 </html>
