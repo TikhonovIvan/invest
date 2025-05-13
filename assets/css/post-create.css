@@ -1,0 +1,180 @@
+.icons-users-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  background: #bdbdbd;
+  border-radius: 100px;
+}
+
+.account-users-arrow {
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.post-create-info {
+  padding: 40px 0;
+  background: #f2f2f2;
+}
+
+.post-create-info-link a {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  color: #9f9f9f;
+  margin-right: 3px;
+}
+.post-create-title {
+  margin: 30px 0 20px 0;
+  font-weight: 600;
+  font-size: 30px;
+}
+.post-create-text {
+}
+
+/*разделы */
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+}
+
+.tab.active {
+  background: #e6f4ef;
+  border: 1px solid #4caf50;
+  color: #1c7c4d;
+}
+
+.content-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.tab-content {
+  display: none;
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.progress-box {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.progress-box li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.circle {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ccc;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.circle.complete {
+  background: #137547;
+  color: #fff;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 6px;
+  height: 8px;
+  margin-top: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #137547;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* По умолчанию скрыть мобильный прогресс и кнопки */
+.mobile-progress,
+.next-btn,
+.submit-btn {
+  display: none;
+}
+
+.submit-btn {
+  display: block;
+}
+/* Только для мобильных устройств до 425px */
+@media (max-width: 425px) {
+  .desktop-progress {
+    display: none;
+  }
+
+  .mobile-progress {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .next-btn,
+  .submit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #137547;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .form-step {
+    display: none;
+  }
+
+  .form-step.active {
+    display: block;
+  }
+}
+
+/*end*/

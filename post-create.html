@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/post-create.css" />
+  </head>
+  <body>
+    <!-- ===== Header Start ===== -->
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+          <div>
+            <a href="index.html" class="logo">
+              <span>INVESTOR</span> <br />
+              KYRGYZSTAN</a
+            >
+          </div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="logo logo-menu">
+                  <span>INVESTOR</span> <br />
+                  KYRGYZSTAN</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a href="projects-investment.html" class="nav-link"
+                  >Проекты для инвестиций</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="market.html" class="nav-link">Бизнес-маркет</a>
+              </li>
+              <li class="nav-item">
+                <a href="school.html" class="nav-link">Обучение</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                  Консалтинг
+                  <img src="assets/img/login/r1.svg" alt="" />
+                  <!-- ▼ стрелка -->
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="consulting.html" class="dropdown-item nav-link"
+                      >Частным инвесторам</a
+                    >
+                  </li>
+                  <li>
+                    <a href="portfolio.html" class="dropdown-item nav-link"
+                      >Финансы</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="charity.html" class="nav-link">Благотворительность</a>
+              </li>
+            </ul>
+
+            <div class="header-bnt-menu">
+              <a href="" class="btn btn-active">Подать объявление</a>
+            </div>
+          </nav>
+
+          <div class="burger">
+            <span></span>
+          </div>
+
+          <div class="header-bnt">
+            <div class="icons-users-img">
+              <img src="assets/img/account/user-solid.svg" alt="" />
+            </div>
+            <div class="account-users-arrow">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.75 12.2499L16 19.7499L7.25 12.2499"
+                  stroke="#DCDFE4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <a href="register.html" class="btn btn-active">Подать объявление</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Investor info Start =====-->
+      <section class="post-create-info">
+        <div class="container">
+          <div class="post-create-info-block">
+            <div class="post-create-info-link">
+              <a href="#">Главная ><a href="#">Создать объявление</a></a>
+            </div>
+
+            <h2 class="post-create-title">Подать объявление</h2>
+            <p class="post-create-text">
+              Расскажите о своём проекте и найдите инвесторов или партнёров
+            </p>
+
+            <!-- Начало блока объявления -->
+            <div class="tabs-wrapper">
+              <!-- Прогресс для мобильной версии -->
+              <div class="progress-box mobile-progress">
+                <h3>Шаг <span class="step-count">1</span> из 3</h3>
+                <ul>
+                  <li>
+                    <span class="circle" data-step="1">&#10003;</span> Основная
+                    информация
+                  </li>
+                  <li>
+                    <span class="circle" data-step="2">&#10003;</span>
+                    Финансовые параметры
+                  </li>
+                  <li>
+                    <span class="circle" data-step="3">&#10003;</span>
+                    Контактная информация
+                  </li>
+                </ul>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <div class="tabs">
+                <button class="tab active" data-target="invest">
+                  Инвестиция
+                </button>
+                <button class="tab" data-target="biz">Бизнес-маркет</button>
+              </div>
+            </div>
+
+            <div class="content-container">
+              <!-- Инвестиция -->
+              <form id="invest" class="tab-content active">
+                <div class="form-step" data-step="1">
+                  <h2>1. Основная информация</h2>
+                  <input type="text" placeholder="Название проекта" required />
+                  <input type="text" placeholder="Описание" required />
+                  <button type="button" class="next-btn mobile-only">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="form-step hidden" data-step="2">
+                  <h2>2. Финансовые параметры</h2>
+                  <input type="number" placeholder="Инвестиции, ₽" required />
+                  <input
+                    type="text"
+                    placeholder="Ожидаемая доходность"
+                    required
+                  />
+                  <button type="button" class="next-btn mobile-only">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="form-step hidden" data-step="3">
+                  <h2>3. Контактная информация</h2>
+                  <input type="text" placeholder="Имя" required />
+                  <input type="email" placeholder="Email" required />
+                  <button type="submit" class="submit-btn">Опубликовать</button>
+                </div>
+              </form>
+
+              <!-- Бизнес-маркет -->
+              <form id="biz" class="tab-content">
+                <div class="form-step" data-step="1">
+                  <h2>1. Основная информация</h2>
+                  <input type="text" placeholder="Название товара" required />
+                  <input type="text" placeholder="Описание товара" required />
+                  <button type="button" class="next-btn mobile-only">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="form-step hidden" data-step="2">
+                  <h2>2. Финансовые параметры</h2>
+                  <input type="number" placeholder="Цена, ₽" required />
+                  <input type="text" placeholder="Скидка" required />
+                  <button type="button" class="next-btn mobile-only">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="form-step hidden" data-step="3">
+                  <h2>3. Контактная информация</h2>
+                  <input type="text" placeholder="Контактное лицо" required />
+                  <input type="email" placeholder="Email" required />
+                  <button type="submit" class="submit-btn">Опубликовать</button>
+                </div>
+              </form>
+
+              <!-- Прогресс (десктоп) -->
+              <div class="progress-box desktop-progress">
+                <h3>Шаг <span class="step-count">1</span> из 3</h3>
+                <ul>
+                  <li>
+                    <span class="circle" data-step="1">&#10003;</span> Основная
+                    информация
+                  </li>
+                  <li>
+                    <span class="circle" data-step="2">&#10003;</span>
+                    Финансовые параметры
+                  </li>
+                  <li>
+                    <span class="circle" data-step="3">&#10003;</span>
+                    Контактная информация
+                  </li>
+                </ul>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Конец  -->
+          </div>
+        </div>
+      </section>
+      <!-- ===== Investor info End =====-->
+    </main>
+
+    <!-- ===== Footer Start ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <div class="logo">
+            <a href="#"
+              ><span class="title-nephritis"> INVESTOR</span> <br />
+              KYRGYZSTAN</a
+            >
+          </div>
+
+          <div class="nav-contact">
+            <div>
+              <h4>Навигация</h4>
+              <nav class="f-nav">
+                <ul class="f-nav-list">
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Главная</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Проекты для инвестиций</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Бизнес-маркет</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Обучение</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Частным инвесторам</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Финансы</a>
+                  </li>
+                  <li class="f-nav-item">
+                    <a href="#" class="f-nav-link">Благотворительность</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="contact">
+              <h4>Контакты для связи</h4>
+              <div class="contact-block">
+                <div>
+                  <a href="mailto:pr@investor.kg">pr@investor.kg</a>
+                </div>
+                <div>
+                  <a href="tel:+996555555555">+996 555 55-55-55</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <div class="copyright-block1">
+            2025 INVESTOR KG. Все права защищены
+          </div>
+          <div>Политика конфиденциальности</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== Footer End ===== -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/create-post.js"></script>
+  </body>
+</html>
