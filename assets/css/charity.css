@@ -54,7 +54,7 @@
   background: radial-gradient(
     61.99% 61.99% at 50% 50%,
     #21836d 0%,
-    #f5f5f5 61.67%
+    #f5f5f5 75%
   );
 }
 @media (max-width: 1024px) {
@@ -64,8 +64,13 @@
 }
 
 @media (max-width: 992px) {
-  .charity-info-img {
-    display: none;
+  .charity-info-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .charity-info-btn {
+    margin: 50px auto;
   }
 }
 
@@ -75,9 +80,17 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  .charity-info {
+    padding-top: 70px;
+  }
+
+  .charity-info-block {
+    text-align: start;
+  }
   .charity-info-title {
-    font-size: 40px;
+    font-size: 32px;
+    margin-top: 15px;
   }
   .charity-info-btn {
     width: 100%;
@@ -121,13 +134,68 @@
 }
 
 @media (max-width: 992px) {
+  .good-info-card {
+    width: 350px;
+  }
   .good-info-title {
     font-size: 40px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .good-info-title {
-    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .good-info-card {
+    width: 100%;
+  }
+  .good-info-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 426px) {
+  .good-info {
+    padding: 40px 0;
+  }
+  .good-info-cards {
+    justify-content: center;
+    row-gap: 15px;
+    column-gap: 10px;
+  }
+  .good-info-card {
+    padding: 10px 10px 15px 10px;
+    width: 174px;
+  }
+  .good-info-title {
+    font-size: 32px;
+  }
+  .good-info-card-title,
+  .good-info-card-number {
+    font-size: 16px;
+  }
+  .good-info-card-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .good-info-cards {
+    justify-content: center;
+    row-gap: 15px;
+    column-gap: 5px;
+  }
+  .good-info-card {
+    padding: 8px 8px 12px 8px;
+    width: 140px;
+  }
+  .good-info-title {
+    font-size: 32px;
+  }
+  .good-info-card-title,
+  .good-info-card-number {
+    font-size: 14px;
+  }
+  .good-info-card-text {
+    font-size: 10px;
   }
 }
 
@@ -188,6 +256,34 @@
 
 .for-what-info-card-img img {
 }
+.for-what-block-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*слайдер*/
+.for-what-navigation {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.for-what-button-prev::after,
+.for-what-button-next::after {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-color-nephritis);
+}
+
+/* Чтобы кнопки не убегали */
+.for-what-button-prev,
+.for-what-button-next {
+  position: static;
+}
+.for-what-info-title br {
+  display: none;
+}
 
 @media (max-width: 992px) {
   .for-what-info-title {
@@ -195,8 +291,17 @@
   }
 }
 @media (max-width: 425px) {
+  .for-what-info-card-body h3 {
+    font-size: 28px;
+  }
+  .for-what-info-card-body p {
+    font-size: 14px;
+  }
   .for-what-info-title {
-    font-size: 35px;
+    font-size: 32px;
+  }
+  .for-what-info-title br {
+    display: block;
   }
 
   .for-what-info-card {
@@ -259,8 +364,14 @@
   }
 }
 @media (max-width: 425px) {
+  .participate-info {
+    padding-bottom: 60px;
+  }
   .participate-info-title {
     font-size: 30px;
+  }
+  .participate-info-card {
+    padding-bottom: 20px;
   }
   .participate-info-card-body {
     width: 100%;
@@ -355,6 +466,9 @@
 }
 
 @media (max-width: 600px) {
+  .charity-info-form {
+    padding: 40px 0;
+  }
   .charity-info-form-lable {
     flex-direction: column;
   }

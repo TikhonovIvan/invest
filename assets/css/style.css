@@ -79,7 +79,7 @@ body {
 
 .logo {
   font-weight: 700;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .logo span {
@@ -87,19 +87,25 @@ body {
   border-bottom: 1px solid var(--text-color-nephritis);
 }
 .nav {
-  margin-right: 65px;
+  margin-right: 60px;
 }
 
 .nav-list {
   display: flex;
+
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.nav-list .nav-item:nth-child(2) {
+  margin-left: -16px;
 }
 .nav-item {
   font-size: 14px;
 }
 .header-bnt {
   display: flex;
+
   gap: 8px;
 }
 
@@ -196,7 +202,8 @@ body {
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
-  background-color: var(--bg-color-nephritis);
+  background-color: var(--bg-color-white);
+  border: 1px solid var(--bg-color-nephritis);
 }
 .dropdown-menu li:first-child {
   margin-bottom: 5px;
@@ -208,7 +215,7 @@ body {
 
 .dropdown-item {
   font-size: 14px;
-  color: var(--text-color-white);
+  color: var(--text-color-black);
 }
 .dropdown-item:hover {
   color: var(--text-color-black);
@@ -306,6 +313,12 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
+  }
+  .nav-list .nav-item:nth-child(2) {
+    margin-left: 0px;
+  }
+  .dropdown-menu {
+    border: none;
   }
 
   /*Выпадающий список*/
@@ -756,13 +769,13 @@ body {
 @media (max-width: 768px) {
   .questions-block {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 
   .questions-block h2 {
     font-size: 40px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: start;
   }
 
   .questions-boxs {
@@ -779,7 +792,7 @@ body {
   }
   .questions-block h2 {
     font-size: 30px;
-    text-align: center;
+    text-align: start;
   }
   .questions-box-title {
     width: 300px;

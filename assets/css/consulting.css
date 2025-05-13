@@ -524,8 +524,10 @@
   margin-top: 10px;
 }
 @media (max-width: 1150px) {
-  .consulting-form-input {
-    width: 450px;
+  .consulting-form-input,
+  .consulting-form-btn p,
+  .consulting-form-btn button {
+    width: 100%;
   }
 }
 
@@ -546,6 +548,9 @@
   .consulting-form-contact-title {
     font-size: 40px;
   }
+  .consulting-form-btn p {
+    width: 100%;
+  }
 }
 @media (max-width: 425px) {
   .consulting-form-contact {
@@ -557,9 +562,7 @@
   .consulting-form-btn button {
     min-width: 100%;
   }
-  .consulting-form-btn p {
-    width: 100%;
-  }
+
   .consulting-forms-block {
     padding: 40px 25px;
   }

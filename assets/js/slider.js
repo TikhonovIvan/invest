@@ -108,6 +108,34 @@ const swiper2 = new Swiper('.services-swiper', {
     },
 });
 
+/* Слайдер благотворительность */
+const swiper3 = new Swiper('.for-what-swiper', {
+    slidesPerView: 1.4,
+    spaceBetween: 10,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5,
+      },
+      425: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1380: {
+        slidesPerView: 4,
+      }
+    },
+    navigation: {
+      nextEl: '.for-what-button-next',  // Используем уникальный класс
+      prevEl: '.for-what-button-prev',  // Используем уникальный класс
+    },
+});
+
   
   
   
