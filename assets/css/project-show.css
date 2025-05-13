@@ -337,9 +337,13 @@
   .project-show-info-btn span {
     display: none;
   }
-  .main-slider,
+  .main-slider {
+    width: 350px;
+  }
   .thumbs-wrapper {
     width: 350px;
+    height: 165px;
+    margin-top: -30px;
   }
 
   .info-date-blocks {
@@ -390,6 +394,9 @@
     width: 28px;
     height: 28px;
     margin-left: 10px;
+  }
+  .thumbs-slider img {
+    height: 80px;
   }
 }
 
