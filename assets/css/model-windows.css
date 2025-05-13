@@ -27,12 +27,12 @@
 .modal-content {
   position: relative;
   z-index: 2;
+  padding: 0 10px;
 }
 
 .modal-close {
   position: absolute;
   top: 16px;
-
   right: 20px;
   font-size: 50px;
   font-weight: 200;
