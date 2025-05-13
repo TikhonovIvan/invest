@@ -28,7 +28,6 @@ window.addEventListener("load", function () {
   }
 
   function updateSteps() {
-    // Обновить активную форму заново (особенно после переключения вкладок)
     activeForm = document.querySelector(".tab-content.active");
     const allSteps = activeForm.querySelectorAll(".form-step");
 
@@ -49,13 +48,11 @@ window.addEventListener("load", function () {
   function updateProgress() {
     let completedSteps = 0;
 
-    // Проверяем заполненность каждого шага
     for (let i = 1; i <= 3; i++) {
       const stepFields = activeForm.querySelectorAll(`.form-step[data-step="${i}"] input`);
       const filled = Array.from(stepFields).every(input => input.value.trim() !== "");
       if (filled) completedSteps++;
 
-      // Обновление круга
       circles.forEach((circle) => {
         if (+circle.dataset.step === i) {
           circle.classList.toggle("complete", filled);
@@ -63,22 +60,17 @@ window.addEventListener("load", function () {
       });
     }
 
-    // Обновление прогресс-бара
-   
-segments.forEach((segment, i) => {
-  if (i < completedSteps) {
-    segment.classList.add("active");
-  } else {
-    segment.classList.remove("active");
-  }
-});
+    // Обновляем визуальные сегменты прогресса
+    segments.forEach((segment, i) => {
+      segment.classList.toggle("active", i < completedSteps);
+    });
 
-    // Обновление номера текущего шага
+    // Обновляем номер текущего шага
     stepCount.forEach((el) => {
       el.textContent = currentStep;
     });
 
-    // Обновление состояния кнопки "Продолжить"
+    // Кнопка "Продолжить"
     const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input`);
     const allCurrentFilled = Array.from(currentFields).every(input => input.value.trim() !== "");
 
@@ -88,9 +80,21 @@ segments.forEach((segment, i) => {
       nextBtn.style.opacity = allCurrentFilled ? 1 : 0.5;
       nextBtn.style.cursor = allCurrentFilled ? "pointer" : "not-allowed";
     }
+
+    // Кнопка "Опубликовать" на десктопе
+    if (window.innerWidth > 425) {
+      const submitBtn = activeForm.querySelector(`.form-step[data-step="3"] .submit-btn`);
+      if (submitBtn) {
+        const step3Fields = activeForm.querySelectorAll(`.form-step[data-step="3"] input`);
+        const allFilled = Array.from(step3Fields).every(input => input.value.trim() !== "");
+        submitBtn.disabled = !allFilled;
+        submitBtn.style.opacity = allFilled ? 1 : 0.5;
+        submitBtn.style.cursor = allFilled ? "pointer" : "not-allowed";
+      }
+    }
   }
 
-  // Кнопки "Продолжить"
+  // Обработка кнопок "Продолжить"
   document.querySelectorAll(".next-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input`);
@@ -102,10 +106,10 @@ segments.forEach((segment, i) => {
     });
   });
 
-  // Отслеживание ввода в поля
+  // Следим за вводом
   document.querySelectorAll("input").forEach((input) => {
     input.addEventListener("input", updateProgress);
   });
 
-  resetSteps(); // Стартовая инициализация
+  resetSteps();
 });
