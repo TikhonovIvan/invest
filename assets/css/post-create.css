@@ -12,6 +12,13 @@
 /*
 Повторяющие элементы start
 */
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #21836d; /* Цвет границы */
+  outline: none; /* Убираем стандартную обводку браузера */
+}
 .invest-title-block {
   font-weight: 600;
   margin-bottom: 10px;
@@ -20,6 +27,27 @@
   font-size: 14px;
   color: #626975;
   margin-bottom: 20px;
+}
+
+/*списки*/
+.select-def {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #dcdfe4;
+  padding: 19px;
+}
+
+.select-def {
+  appearance: none; /* Убираем стандартную стрелку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../img/account/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 19px) center; /* Сдвигаем стрелку */
+  background-size: 16px 16px;
+  padding-right: 30px; /* Оставляем место для стрелки */
+}
+.option-def {
 }
 
 /*
@@ -472,4 +500,9 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/*.invest-block-comp*/
+
+.invest-block-comp {
 }
