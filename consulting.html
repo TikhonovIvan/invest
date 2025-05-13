@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/school.css" />
     <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <link rel="stylesheet" href="assets/css/model-windows.css" />
     <link rel="stylesheet" href="assets/css/consulting.css" />
   </head>
   <body>
@@ -94,6 +95,40 @@
 
     <!-- ===== Header End ===== -->
 
+    <!-- Модальное окно -->
+    <div class="modal hidden">
+      <div class="fon"></div>
+      <!-- Крестик -->
+      <span class="modal-close">&times;</span>
+
+      <div class="modal-content">
+        <div class="consulting-forms-block">
+          <form action="">
+            <div class="consulting-form-input">
+              <img src="assets/img/consulting/user.png" alt="" />
+              <input type="text" name="name" placeholder="Ваше имя" />
+            </div>
+            <div class="consulting-form-input">
+              <img src="assets/img/consulting/phone.png" alt="" />
+              <input
+                type="text"
+                name="phone_whatsapp"
+                placeholder="Номер WhatsApp"
+                class="input-n"
+              />
+            </div>
+            <div class="consulting-form-btn">
+              <button type="submit">Подать заявку</button>
+              <p>
+                Нажимая на кнопку "Отправить заявку", вы соглашаетесь
+                c политикой в отношении обработки персональных данных
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <main class="">
       <!-- ===== consulting info Start ====== -->
       <section class="consulting-info">
@@ -111,7 +146,7 @@
               </p>
 
               <div class="consulting-info-btns">
-                <a href="#" class="consulting-info-btn"
+                <a href="#" class="consulting-info-btn model-w"
                   >Получить консультацию</a
                 >
                 <a href="#" class="consulting-info-btn">Узнать об услуге</a>
@@ -579,11 +614,7 @@
               <form action="">
                 <div class="consulting-form-input">
                   <img src="assets/img/consulting/user.png" alt="" />
-                  <input
-                    type="phone"
-                    name="phone"
-                    placeholder="Введите номер телефона"
-                  />
+                  <input type="phone" name="phone" placeholder="Ваше имя" />
                 </div>
                 <div class="consulting-form-input">
                   <img src="assets/img/consulting/phone.png" alt="" />

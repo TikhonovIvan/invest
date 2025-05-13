@@ -64,3 +64,23 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
 });
 
 
+
+
+
+  const openBtn = document.querySelector('.model-w');
+  const modal = document.querySelector('.modal');
+  const closeBtn = document.querySelector('.modal-close');
+  const backdrop = document.querySelector('.fon');
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  backdrop.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
