@@ -83,26 +83,50 @@
 }
 
 @media (max-width: 1024px) {
+  .investment-portfolio-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .investment-portfolio {
     padding-top: 150px;
+    padding-bottom: 40px;
   }
   .investment-portfolio-title {
     font-size: 35px;
   }
   .investment-portfolio-img {
-    display: none;
+    height: 100%;
   }
-  .investment-portfolio {
+  .investment-portfolio-img img {
+    width: 100%;
+  }
+  /* .investment-portfolio {
     width: 100%;
     margin: 0 auto;
     background: url(../img/portfolio/bg.png),
       radial-gradient(61.99% 61.99% at 50% 50%, #21836d 0%, #f5f5f5 61.67%);
     background-repeat: no-repeat;
     background-position: center;
-  }
+  } */
 }
 
 @media (max-width: 425px) {
+  .investment-portfolio-img {
+    height: 100%;
+  }
+  .investment-portfolio {
+    padding-top: 110px;
+    padding-bottom: 20px;
+  }
+
+  .investment-portfolio-block {
+    margin-top: 0px;
+  }
+  .investment-portfolio-info {
+    align-items: start;
+    text-align: start;
+  }
   .investment-portfolio-btn {
     width: 100%;
   }
@@ -117,6 +141,9 @@
   .investment-portfolio-block p {
     font-size: 16px;
     font-weight: 500;
+  }
+  .investment-portfolio-block p {
+    margin-bottom: 40px;
   }
 }
 
@@ -185,13 +212,39 @@
   }
 }
 
-@media (max-width: 425px) {
-  .offer-card-title h3 {
-    font-size: 20px;
-  }
+@media (max-width: 426px) {
   .offer-card-title img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+  }
+  .offer-card-title {
+    display: flex;
+    row-gap: 15px;
+    flex-flow: wrap column-reverse;
+
+    margin-bottom: 20px;
+  }
+  .offer-card-title h3 {
+    width: 100%;
+    height: auto;
+  }
+  .offer-card-body-title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .offer-card-body p {
+    font-size: 14px;
+  }
+
+  .investment-offer-block h2 {
+    font-size: 32px;
+  }
+  .investment-offer {
+    padding: 40px 0;
+  }
+  .offer-card-title h3 {
+    font-size: 26px;
   }
 }
 
@@ -201,8 +254,6 @@
   padding: 100px 0;
 }
 
-.investment-values-block {
-}
 .investment-values-title {
   width: 700px;
   font-weight: 600;
