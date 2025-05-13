@@ -1,8 +1,3 @@
-.project-show {
-}
-
-.project-show-block {
-}
 .crumbs {
   margin-bottom: 30px;
 }
@@ -95,8 +90,6 @@
   background-color: var(--bg-color-white);
 }
 
-.info-date-social {
-}
 .info-date-blocks {
   display: flex;
   flex-direction: column;
@@ -323,9 +316,6 @@
   .project-show-info-btns {
     flex-direction: row;
     align-items: start;
-  }
-
-  .project-show-info-btn {
   }
 
   .project-show-info-btn {
