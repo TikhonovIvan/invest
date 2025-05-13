@@ -254,14 +254,13 @@
   margin-bottom: 30px;
 }
 
-.for-what-info-card-img img {
-}
+/*слайдер*/
+
 .for-what-block-header {
   display: flex;
   justify-content: space-between;
 }
 
-/*слайдер*/
 .for-what-navigation {
   display: flex;
   column-gap: 10px;
@@ -269,6 +268,8 @@
   margin-top: -30px;
 }
 
+.story-users-button-prev::after,
+.story-users-button-next::after,
 .for-what-button-prev::after,
 .for-what-button-next::after {
   font-size: 16px;
@@ -277,6 +278,8 @@
 }
 
 /* Чтобы кнопки не убегали */
+.story-users-button-prev,
+.story-users-button-next,
 .for-what-button-prev,
 .for-what-button-next {
   position: static;
@@ -298,7 +301,7 @@
     font-size: 14px;
   }
   .for-what-info-title {
-    font-size: 32px;
+    font-size: 30px;
   }
   .for-what-info-title br {
     display: block;
@@ -315,8 +318,6 @@
   padding-bottom: 100px;
 }
 
-.participate-info-block {
-}
 .participate-info-title {
   margin-bottom: 60px;
 }
@@ -447,6 +448,22 @@
   outline: none;
   border: 2px solid var(--bg-color-nephritis);
 }
+.charity-info-form-button p {
+  text-align: center;
+  color: #626975;
+  margin-top: 15px;
+}
+.story-users-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.story-users-block-header {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  margin-top: -30px;
+}
 
 @media (max-width: 1024px) {
   .charity-info-form-body h2 {
@@ -470,7 +487,6 @@
     padding: 40px 0;
   }
   .charity-info-form-lable {
-    flex-direction: column;
   }
   .charity-info-forms {
     padding: 10px;
@@ -485,6 +501,7 @@
 /* story-users-info */
 
 .story-users-info {
+  padding: 80px 0;
 }
 
 .story-users-info-block {
@@ -535,12 +552,8 @@
   .story-users-info-title {
     font-size: 35px;
   }
-}
-
-/*кастомные*/
-@media (max-width: 425px) {
-  .size-32px {
-    font-size: 25px;
+  .story-users-info-c {
+    font-size: 14px;
   }
   .quote {
     font-size: 18px;

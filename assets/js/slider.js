@@ -136,6 +136,34 @@ const swiper3 = new Swiper('.for-what-swiper', {
     },
 });
 
+/*Истории участников  */
+const swiper4 = new Swiper('.story-users-swiper', {
+    slidesPerView: 1.4,
+    spaceBetween: 10,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5,
+      },
+      425: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1380: {
+        slidesPerView: 4,
+      }
+    },
+    navigation: {
+      nextEl: '.story-users-button-next',  // Используем уникальный класс
+      prevEl: '.story-users-button-prev',  // Используем уникальный класс
+    },
+});
+
   
   
   

@@ -262,7 +262,7 @@
 
   .investment-values-card:nth-child(4) {
     margin-left: 0px; /* Вот ключевой момент */
-    margin-top: -60px;
+    margin-top: -40px;
     z-index: 1;
   }
 }
@@ -270,7 +270,7 @@
 @media (max-width: 1100px) {
   .investment-values-card:nth-child(3) {
     margin-left: 0px;
-    margin-top: -60px;
+    margin-top: -40px;
     z-index: 1;
   }
 }
@@ -311,7 +311,7 @@
   }
   .investment-values-card:nth-child(3),
   .investment-values-card:nth-child(4) {
-    margin-top: -45px;
+    margin-top: -20px;
   }
   .investment-values-card {
     width: 215px;
@@ -357,10 +357,6 @@
 }
 
 @media (max-width: 376px) {
-  .investment-values-card:nth-child(3),
-  .investment-values-card:nth-child(4) {
-    margin-top: -35px;
-  }
   .investment-values-text {
     font-size: 16px;
     margin-bottom: 40px;
