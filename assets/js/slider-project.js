@@ -20,13 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 3,
         },
         425: {
-          slidesPerView: 2,
+          
+          slidesPerView: 4,
         },
         375: {
-          slidesPerView: 1,
+          slidesPerView: 4,
         },
         320: {
-          slidesPerView: 1,
+          slidesPerView: 4,
         },
       }
     });
