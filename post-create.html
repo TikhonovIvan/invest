@@ -156,6 +156,7 @@
                   <h2>1. Основная информация</h2>
 
                   <div class="invest-wrapper-blocks">
+                    <!-- Фото проекта -->
                     <div class="invest-block-images">
                       <h4 class="invest-title-block">Фото проекта</h4>
                       <p class="invest-text-info-block">
@@ -181,6 +182,7 @@
                       </p>
                     </div>
 
+                    <!-- Юридическое наименование компании-->
                     <div class="invest-block-ur-name">
                       <h4 class="invest-title-block">
                         Юридическое наименование компании
@@ -196,24 +198,26 @@
                       </p>
                     </div>
 
+                    <!--  Сколько учредителей в компании? -->
                     <div class="invest-block-uch-number">
                       <h4 class="invest-title-block">
                         Сколько учредителей в компании?
                         <span class="title-nephritis">*</span>
                       </h4>
                       <div class="input-wrapper">
-                        <button type="button" class="circle-btn" id="decrement">
+                        <button type="button" class="circle-btn decrement-btn">
                           −
                         </button>
                         <input
                           type="number"
-                          id="foundersCount"
+                          class="founders-count-input"
+                          name="founders-count"
                           value="1"
                           min="1"
                           placeholder="ООО “Ромашка”"
                           required
                         />
-                        <button type="button" class="circle-btn" id="increment">
+                        <button type="button" class="circle-btn increment-btn">
                           +
                         </button>
                       </div>
@@ -222,6 +226,7 @@
                       </p>
                     </div>
 
+                    <!--  Основная деятельность компании -->
                     <div class="invest-block-comp">
                       <h4 class="invest-title-block">
                         Основная деятельность компании
@@ -238,6 +243,7 @@
                       </select>
                     </div>
 
+                    <!--     Стадия развития компании -->
                     <div class="invest-block-comp">
                       <h4 class="invest-title-block">
                         Стадия развития компании
@@ -245,14 +251,108 @@
                       </h4>
 
                       <select name="" id="" class="select-def">
-                        <option value="" class="option-def">
+                        <option value="comp-1" class="option-def">
                           Выберите стадию развития
                         </option>
-                        <option value="" class="option-def">
+                        <option value="comp-1" class="option-def">
                           Выберите стадию развития
                         </option>
                       </select>
                     </div>
+
+                    <!--     Стадия развития компании -->
+                    <div class="invest-block-comp-date">
+                      <h4 class="invest-title-block">
+                        Дата основания компании
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <div class="invest-block-comp-date-select">
+                        <select
+                          name=""
+                          id="yearSelect"
+                          class="select-def comp-date"
+                        >
+                          <option class="option-def" disabled selected>
+                            Год
+                          </option>
+                        </select>
+
+                        <select
+                          name=""
+                          id="monthSelect"
+                          class="select-def comp-month"
+                        >
+                          <option class="option-def" disabled selected>
+                            Месяц
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Адрес учреждения*-->
+                    <div class="invest-block-adres">
+                      <h4 class="invest-title-block">
+                        Адрес учреждения
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <input
+                        type="text"
+                        placeholder=" Укажите фактический адрес компании (город, улица, дом)"
+                        required
+                      />
+                      <p class="invest-text-info-block">
+                        Например: г. Бишкек, ул. 7 апреля, 32А
+                      </p>
+                    </div>
+
+                    <!--  Сколько у вас филиалов или точек продаж?* -->
+                    <div class="invest-block-uch-number">
+                      <h4 class="invest-title-block">
+                        Сколько у вас филиалов или точек продаж?
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <div class="input-wrapper">
+                        <button type="button" class="circle-btn decrement-btn">
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          class="founders-count-input"
+                          name="branches_count"
+                          value="1"
+                          min="1"
+                          required
+                        />
+                        <button type="button" class="circle-btn increment-btn">
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <!--  Сколько сотрудников работает в компании?* -->
+                    <div class="invest-block-uch-number">
+                      <h4 class="invest-title-block">
+                        Сколько сотрудников работает в компании?
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <div class="input-wrapper">
+                        <button type="button" class="circle-btn decrement-btn">
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          class="founders-count-input"
+                          name="employees_count"
+                          value="1"
+                          min="1"
+                          required
+                        />
+                        <button type="button" class="circle-btn increment-btn">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <br />
                   </div>
 
                   <button type="button" class="next-btn mobile-only">

@@ -111,5 +111,41 @@ window.addEventListener("load", function () {
     input.addEventListener("input", updateProgress);
   });
 
+
   resetSteps();
+  
+});
+
+
+
+/*Дата и месяц */
+window.addEventListener("DOMContentLoaded", () => {
+  const yearSelect = document.getElementById("yearSelect");
+  const monthSelect = document.getElementById("monthSelect");
+
+  const currentYear = new Date().getFullYear();
+  const startYear = 1980;
+
+  // Заполняем список годов (от 1980 до текущего года)
+  for (let y = currentYear; y >= startYear; y--) {
+    const option = document.createElement("option");
+    option.value = y;
+    option.textContent = y;
+    yearSelect.appendChild(option);
+  }
+
+  // Месяцы на русском
+  const months = [
+    "Январь", "Февраль", "Март", "Апрель",
+    "Май", "Июнь", "Июль", "Август",
+    "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+  ];
+
+  // Заполняем список месяцев
+  months.forEach((month, index) => {
+    const option = document.createElement("option");
+    option.value = index + 1; // значение от 1 до 12
+    option.textContent = month;
+    monthSelect.appendChild(option);
+  });
 });
