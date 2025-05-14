@@ -580,6 +580,13 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 100%;
 }
 
+.top-next {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  z-index: 10;
+}
+
 .no-gap {
   margin-bottom: 10px;
 }
@@ -603,6 +610,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 426px) {
+  .content-container {
+    padding-bottom: 100px;
+  }
   .desktop-progress {
     display: none;
   }
@@ -614,6 +624,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .form-step {
     display: none;
+    position: relative;
   }
   .invest-block-comp-date-select select {
     width: 100%;
@@ -621,5 +632,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .form-step.active {
     display: block;
+  }
+  .next-btn,
+  .submit-btn {
+    width: 100%;
+    margin: 0;
   }
 }
