@@ -248,7 +248,7 @@ input {
 .submit-btn {
   display: none;
 }
-
+.next-btn,
 .submit-btn {
   display: block;
   width: 410px;
@@ -592,6 +592,14 @@ input[type="number"]::-webkit-outer-spin-button {
     display: block;
     margin-bottom: 20px;
   }
+
+  .invest-block-how-much-box-1 {
+    width: 100%;
+  }
+  .next-btn,
+  .submit-btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 426px) {
@@ -604,20 +612,11 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 20px;
   }
 
-  .next-btn,
-  .submit-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(--bg-color-nephritis);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
   .form-step {
     display: none;
+  }
+  .invest-block-comp-date-select select {
+    width: 100%;
   }
 
   .form-step.active {
