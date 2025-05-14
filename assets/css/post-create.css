@@ -249,7 +249,7 @@ input {
 }
 
 /* Только для мобильных устройств до 425px */
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .desktop-progress {
     display: none;
   }

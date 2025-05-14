@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
 
     allSteps.forEach((step) => step.classList.remove("active", "hidden"));
 
-    if (window.innerWidth <= 425) {
+    if (window.innerWidth <= 426) {
       allSteps.forEach((step) => step.classList.add("hidden"));
       const current = activeForm.querySelector(`.form-step[data-step="${currentStep}"]`);
       if (current) {
@@ -45,12 +45,28 @@ window.addEventListener("load", function () {
     updateProgress();
   }
 
+  function checkImages() {
+    // Ищем все загруженные изображения внутри imageContainer
+    const imageContainer = activeForm.querySelector('#imageContainer');
+    if (!imageContainer) return false;
+    
+    // Проверяем наличие элементов изображений (не input file, а уже загруженных preview)
+    const uploadedImages = imageContainer.querySelectorAll('img:not([type="file"]), .image-preview');
+    return uploadedImages.length > 0;
+  }
+
   function updateProgress() {
     let completedSteps = 0;
 
     for (let i = 1; i <= 3; i++) {
-      const stepFields = activeForm.querySelectorAll(`.form-step[data-step="${i}"] input`);
-      const filled = Array.from(stepFields).every(input => input.value.trim() !== "");
+      const stepFields = activeForm.querySelectorAll(`.form-step[data-step="${i}"] input:required`);
+      let filled = Array.from(stepFields).every(input => input.value.trim() !== "");
+      
+      // Для шага 1 дополнительно проверяем наличие изображений
+      if (i === 1) {
+        filled = filled && checkImages();
+      }
+
       if (filled) completedSteps++;
 
       circles.forEach((circle) => {
@@ -71,8 +87,13 @@ window.addEventListener("load", function () {
     });
 
     // Кнопка "Продолжить"
-    const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input`);
-    const allCurrentFilled = Array.from(currentFields).every(input => input.value.trim() !== "");
+    const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input:required`);
+    let allCurrentFilled = Array.from(currentFields).every(input => input.value.trim() !== "");
+    
+    // Для шага 1 дополнительно проверяем наличие изображений
+    if (currentStep === 1) {
+      allCurrentFilled = allCurrentFilled && checkImages();
+    }
 
     const nextBtn = activeForm.querySelector(`.form-step[data-step="${currentStep}"] .next-btn`);
     if (nextBtn) {
@@ -82,10 +103,10 @@ window.addEventListener("load", function () {
     }
 
     // Кнопка "Опубликовать" на десктопе
-    if (window.innerWidth > 425) {
+    if (window.innerWidth > 426) {
       const submitBtn = activeForm.querySelector(`.form-step[data-step="3"] .submit-btn`);
       if (submitBtn) {
-        const step3Fields = activeForm.querySelectorAll(`.form-step[data-step="3"] input`);
+        const step3Fields = activeForm.querySelectorAll(`.form-step[data-step="3"] input:required`);
         const allFilled = Array.from(step3Fields).every(input => input.value.trim() !== "");
         submitBtn.disabled = !allFilled;
         submitBtn.style.opacity = allFilled ? 1 : 0.5;
@@ -97,8 +118,14 @@ window.addEventListener("load", function () {
   // Обработка кнопок "Продолжить"
   document.querySelectorAll(".next-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input`);
-      const allFilled = Array.from(currentFields).every(input => input.value.trim() !== "");
+      const currentFields = activeForm.querySelectorAll(`.form-step[data-step="${currentStep}"] input:required`);
+      let allFilled = Array.from(currentFields).every(input => input.value.trim() !== "");
+      
+      // Для шага 1 дополнительно проверяем наличие изображений
+      if (currentStep === 1) {
+        allFilled = allFilled && checkImages();
+      }
+      
       if (allFilled && currentStep < 3) {
         currentStep++;
         updateSteps();
@@ -111,11 +138,35 @@ window.addEventListener("load", function () {
     input.addEventListener("input", updateProgress);
   });
 
+  // Улучшенный наблюдатель за изменениями изображений
+  function observeImages() {
+    const observer = new MutationObserver(function(mutations) {
+      // Принудительно обновляем прогресс при изменении изображений
+      updateProgress();
+    });
+
+    const imageContainer = document.querySelector('#imageContainer');
+    if (imageContainer) {
+      observer.observe(imageContainer, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        characterData: true
+      });
+    }
+  }
 
   resetSteps();
-  
-});
+  observeImages();
 
+  // Дополнительно вызываем updateProgress при загрузке изображений через input file
+  document.querySelectorAll('#imageInput').forEach(input => {
+    input.addEventListener('change', function() {
+      // Даем немного времени на обработку изображений перед проверкой
+      setTimeout(updateProgress, 300);
+    });
+  });
+});
 
 
 /*Дата и месяц */
