@@ -243,7 +243,7 @@
                       </select>
                     </div>
 
-                    <!--     Стадия развития компании -->
+                    <!--  Стадия развития компании -->
                     <div class="invest-block-comp">
                       <h4 class="invest-title-block">
                         Стадия развития компании
@@ -260,7 +260,7 @@
                       </select>
                     </div>
 
-                    <!--     Стадия развития компании -->
+                    <!--   Дата основания компании -->
                     <div class="invest-block-comp-date">
                       <h4 class="invest-title-block">
                         Дата основания компании
@@ -362,16 +362,103 @@
 
                 <div class="form-step hidden" data-step="2">
                   <h2>2. Финансовые параметры</h2>
-                  <input type="number" placeholder="Инвестиции, ₽" required />
-                  <input
-                    type="text"
-                    placeholder="Ожидаемая доходность"
-                    required
-                  />
+
+                  <div class="invest-wrapper-blocks">
+                    <!-- Сколько инвестиций вы ищете?*-->
+                    <div class="invest-block-how-much">
+                      <h4 class="invest-title-block">
+                        Сколько инвестиций вы ищете?
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <div class="invest-block-how-much-boxs">
+                        <div class="invest-block-how-much-box-1">
+                          <input type="text" placeholder="Цена" required />
+                        </div>
+                        <div class="invest-block-how-much-box-2">
+                          <div class="invest-block-how-much-box-radio">
+                            <input
+                              type="radio"
+                              name="currency"
+                              id="currency-kgs"
+                              required
+                            />
+                            <label for="currency-kgs">KGS</label>
+                          </div>
+                          <div class="invest-block-how-much-box-radio">
+                            <input
+                              type="radio"
+                              name="currency"
+                              id="currency-usd"
+                              required
+                            />
+                            <label for="currency-usd">USD</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="invest-text-info-block">
+                        Укажите точную сумму в одной из валют (например: 100
+                        000)
+                      </p>
+                    </div>
+
+                    <!--  На что вы планируете потратить инвестиции?* -->
+                    <div class="invest-block-comp">
+                      <h4 class="invest-title-block">
+                        На что вы планируете потратить инвестиции?*
+                        <span class="title-nephritis">*</span>
+                      </h4>
+
+                      <select name="" id="" class="select-def">
+                        <option class="option-def" disabled selected>
+                          Выберите из списка
+                        </option>
+                        <option class="option-def">оборудование</option>
+                        <option class="option-def">маркетинг</option>
+                        <option class="option-def">расширение команды</option>
+                      </select>
+                      <p class="invest-text-info-block">
+                        Например: оборудование, маркетинг, расширение команды
+                      </p>
+                    </div>
+
+                    <!-- На каких условиях вы предлагаете инвестиции?* -->
+                    <div class="invest-block-ur-name">
+                      <h4 class="invest-title-block">
+                        На каких условиях вы предлагаете инвестиции?
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <input
+                        type="text"
+                        placeholder="Впишите условия"
+                        required
+                      />
+                      <p class="invest-text-info-block">
+                        Доля, займ, проценты, безвозвратное финансирование и
+                        т.д.
+                      </p>
+                    </div>
+
+                    <!-- Через сколько бизнес начнёт приносить прибыль?*-->
+                    <div class="invest-block-ur-name">
+                      <h4 class="invest-title-block">
+                        Юридическое наименование компании
+                        <span class="title-nephritis">*</span>
+                      </h4>
+                      <input
+                        type="text"
+                        placeholder="Укажите срок в месяцах или годах "
+                        required
+                      />
+                      <p class="invest-text-info-block">Например: 12 мес.</p>
+                    </div>
+                  </div>
+
                   <button type="button" class="next-btn mobile-only">
                     Продолжить
                   </button>
                 </div>
+
                 <div class="form-step hidden" data-step="3">
                   <h2>3. Контактная информация</h2>
                   <input type="text" placeholder="Имя" required />

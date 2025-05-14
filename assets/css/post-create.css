@@ -524,10 +524,33 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 177px;
 }
 .select-def {
+  margin-bottom: 10px;
 }
 .comp-date {
 }
 .option-def {
 }
 .comp-month {
+}
+
+/*.invest-block-how-much */
+.invest-block-how-much {
+}
+.invest-block-how-much-boxs {
+  display: flex;
+  gap: 20px;
+}
+.invest-block-how-much-box-1 {
+  width: 361px;
+}
+.invest-block-how-much-box-2 {
+  display: flex;
+  gap: 20px;
+}
+.invest-block-how-much-box-radio {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.invest-text-info-block {
 }
