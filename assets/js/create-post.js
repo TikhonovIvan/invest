@@ -46,9 +46,16 @@ window.addEventListener("load", function () {
   }
 
   function checkImages() {
-    const imageContainer = activeForm.querySelector('#imageContainer');
-    if (!imageContainer) return false;
-    const uploadedImages = imageContainer.querySelectorAll('img:not([type="file"]), .image-preview');
+    // Ищем контейнеры изображений для текущей активной формы
+    const imageContainerInvest = activeForm.querySelector('#imageContainerInvest');
+    const imageContainerBiz = activeForm.querySelector('#imageContainerBiz');
+    
+    // Проверяем, какой контейнер существует в текущей форме
+    const activeImageContainer = imageContainerInvest || imageContainerBiz;
+    if (!activeImageContainer) return false;
+    
+    // Ищем загруженные изображения (исключаем input[type="file"])
+    const uploadedImages = activeImageContainer.querySelectorAll('.add-image img');
     return uploadedImages.length > 0;
   }
 
@@ -129,39 +136,55 @@ window.addEventListener("load", function () {
   // Наблюдатель за изменениями изображений
   function observeImages() {
     const observer = new MutationObserver(updateProgress);
-    const imageContainer = document.querySelector('#imageContainer');
-    if (imageContainer) {
-      observer.observe(imageContainer, {
+    
+    // Наблюдаем за обоими возможными контейнерами изображений
+    const imageContainerInvest = document.querySelector('#imageContainerInvest');
+    const imageContainerBiz = document.querySelector('#imageContainerBiz');
+    
+    if (imageContainerInvest) {
+      observer.observe(imageContainerInvest, {
         childList: true,
-        subtree: true,
-        attributes: true,
-        characterData: true
+        subtree: true
+      });
+    }
+    
+    if (imageContainerBiz) {
+      observer.observe(imageContainerBiz, {
+        childList: true,
+        subtree: true
       });
     }
   }
 
+  // Инициализация
   resetSteps();
   observeImages();
 
-  document.querySelectorAll('#imageInput').forEach(input => {
+  // Обработчики для всех возможных инпутов загрузки изображений
+  document.querySelectorAll('#imageInputInvest, #imageInputBiz').forEach(input => {
     input.addEventListener('change', function() {
-      setTimeout(updateProgress, 300);
+      setTimeout(updateProgress, 300); // Даем время на обработку изображения
     });
   });
 });
 
 
+/**
+ * Заполняет селекты годов и месяцев
+ * @param {string} yearSelectId - ID селекта годов
+ * @param {string} monthSelectId - ID селекта месяцев
+ */
+function initDateSelects(yearSelectId, monthSelectId) {
+  const yearSelect = document.getElementById(yearSelectId);
+  const monthSelect = document.getElementById(monthSelectId);
 
-/*Дата и месяц */
-window.addEventListener("DOMContentLoaded", () => {
-  const yearSelect = document.getElementById("yearSelect");
-  const monthSelect = document.getElementById("monthSelect");
+  // Очищаем дефолтные option (если они есть)
+  yearSelect.innerHTML = '<option disabled selected>Год</option>';
+  monthSelect.innerHTML = '<option disabled selected>Месяц</option>';
 
+  // Заполняем годы (от 1980 до текущего)
   const currentYear = new Date().getFullYear();
-  const startYear = 1980;
-
-  // Заполняем список годов (от 1980 до текущего года)
-  for (let y = currentYear; y >= startYear; y--) {
+  for (let y = currentYear; y >= 1980; y--) {
     const option = document.createElement("option");
     option.value = y;
     option.textContent = y;
@@ -175,11 +198,16 @@ window.addEventListener("DOMContentLoaded", () => {
     "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
   ];
 
-  // Заполняем список месяцев
   months.forEach((month, index) => {
     const option = document.createElement("option");
-    option.value = index + 1; // значение от 1 до 12
+    option.value = index + 1; // 1-12
     option.textContent = month;
     monthSelect.appendChild(option);
   });
+}
+
+// Инициализируем для обеих форм
+document.addEventListener("DOMContentLoaded", () => {
+  initDateSelects("yearSelectInvest", "monthSelectInvest"); // Для Инвестиции
+  initDateSelects("yearSelectBiz", "monthSelectBiz");       // Для Бизнес-маркета
 });
