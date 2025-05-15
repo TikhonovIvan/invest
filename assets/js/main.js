@@ -66,7 +66,7 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
 
 
 
-
+/*Модальное окно */
   const openBtn = document.querySelector('.model-w');
   const modal = document.querySelector('.modal');
   const closeBtn = document.querySelector('.modal-close');
