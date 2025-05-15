@@ -1,9 +1,9 @@
 window.addEventListener("load", function () {
   const tabs = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".tab-content");
-  const segments = document.querySelectorAll(".progress-segment");
   const circles = document.querySelectorAll(".circle");
   const stepCount = document.querySelectorAll(".step-count");
+  const progressSegments = document.querySelectorAll(".progress-segment");
 
   let currentStep = 1;
   let activeForm = document.querySelector(".tab-content.active");
@@ -76,18 +76,19 @@ window.addEventListener("load", function () {
         allStepsFilled = false;
       }
 
-      circles.forEach((circle) => {
-        if (+circle.dataset.step === i) {
-          circle.classList.toggle("complete", stepFilled);
-        }
+      // Обновляем кружки для всех версий
+      document.querySelectorAll(`.circle[data-step="${i}"]`).forEach(circle => {
+        circle.classList.toggle("complete", stepFilled);
       });
     }
 
-    segments.forEach((segment, i) => {
-      segment.classList.toggle("active", i < completedSteps);
+    // Обновляем сегменты прогресса для всех версий
+    document.querySelectorAll('.progress-segment').forEach((segment, index) => {
+      segment.classList.toggle('active', index < completedSteps);
     });
 
-    stepCount.forEach((el) => {
+    // Обновляем номер шага для всех версий
+    stepCount.forEach(el => {
       el.textContent = currentStep;
     });
 
@@ -111,7 +112,8 @@ window.addEventListener("load", function () {
 
   // Обработка кнопок "Продолжить"
   document.querySelectorAll(".next-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
       if (isStepFilled(currentStep) && currentStep < 3) {
         currentStep++;
         updateSteps();
@@ -147,6 +149,8 @@ window.addEventListener("load", function () {
     });
   });
 });
+
+
 
 /*Дата и месяц */
 window.addEventListener("DOMContentLoaded", () => {

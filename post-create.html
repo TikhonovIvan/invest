@@ -116,36 +116,7 @@
             <p class="post-create-text">
               Расскажите о своём проекте и найдите инвесторов или партнёров
             </p>
-
-            <!-- Начало блока объявления -->
             <div class="tabs-wrapper">
-              <!-- Прогресс для мобильной версии -->
-              <div class="progress-box mobile-progress">
-                <h3>Шаг <span class="step-count">1</span> из 3</h3>
-                <div class="progress-bar">
-                  <div class="progress-segment" data-index="1"></div>
-                  <div class="progress-segment" data-index="2"></div>
-                  <div class="progress-segment" data-index="3"></div>
-                </div>
-                <ul>
-                  <li>
-                    <span class="circle" data-step="1">&#10003;</span> Основная
-                    информация
-                  </li>
-                  <li>
-                    <span class="circle" data-step="2">&#10003;</span>
-                    Финансовые параметры
-                  </li>
-                  <li>
-                    <span class="circle" data-step="3">&#10003;</span>
-                    Контактная информация
-                  </li>
-                </ul>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 0%"></div>
-                </div>
-              </div>
-
               <div class="tabs">
                 <button class="tab active" data-target="invest">
                   Инвестиция
@@ -155,6 +126,14 @@
             </div>
 
             <div class="content-container">
+              <div class="tabs-wrapper mobile">
+                <div class="tabs">
+                  <button class="tab active" data-target="invest">
+                    Инвестиция
+                  </button>
+                  <button class="tab" data-target="biz">Бизнес-маркет</button>
+                </div>
+              </div>
               <!-- Инвестиция -->
               <form id="invest" class="tab-content active">
                 <div class="invest-forms-wrapper">
@@ -582,6 +561,9 @@
                     </button>
                   </div>
                 </div>
+                <button type="submit" class="submit-btn d-none">
+                  Опубликовать
+                </button>
               </form>
 
               <!-- Бизнес-маркет -->
@@ -623,6 +605,7 @@
                   <div class="progress-segment" data-index="2"></div>
                   <div class="progress-segment" data-index="3"></div>
                 </div>
+
                 <ul>
                   <li>
                     <span class="circle" data-step="1">&#10003;</span> Основная

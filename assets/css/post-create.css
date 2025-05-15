@@ -259,7 +259,9 @@ input {
   border-radius: 16px;
   margin-top: 40px;
   border: none;
+  cursor: pointer;
   color: var(--text-color-white);
+
   background-color: var(--bg-color-nephritis);
 }
 
@@ -581,31 +583,44 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .top-next {
+  display: none;
   position: absolute;
   left: 0;
   bottom: -100px;
-  z-index: 10;
+  padding: 0;
 }
 
 .no-gap {
+  opacity: 0.5;
+  cursor: not-allowed;
   margin-bottom: 10px;
 }
 
+.tabs-wrapper.mobile {
+  display: none;
+}
 @media (max-width: 992px) {
-  .desktop-progress {
-    display: none;
-  }
-  .mobile-progress {
-    display: block;
-    margin-bottom: 20px;
-  }
-
   .invest-block-how-much-box-1 {
     width: 100%;
   }
   .next-btn,
   .submit-btn {
     width: 100%;
+  }
+  .content-container {
+    flex-direction: column-reverse;
+  }
+  .tabs-wrapper {
+    order: 1;
+  }
+  .desktop-progress {
+    order: 1;
+  }
+  .tabs-wrapper {
+    display: none;
+  }
+  .tabs-wrapper.mobile {
+    display: block;
   }
 }
 
@@ -614,6 +629,11 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-bottom: 100px;
   }
   .desktop-progress {
+  }
+  .top-next {
+    display: block;
+  }
+  .d-none {
     display: none;
   }
 
@@ -636,6 +656,8 @@ input[type="number"]::-webkit-outer-spin-button {
   .next-btn,
   .submit-btn {
     width: 100%;
-    margin: 0;
+  }
+  .hr {
+    display: none;
   }
 }
