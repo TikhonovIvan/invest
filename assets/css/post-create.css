@@ -607,8 +607,13 @@ input[type="number"]::-webkit-outer-spin-button {
   .submit-btn {
     width: 100%;
   }
+  .tab {
+    border-radius: 16px;
+  }
+
   .content-container {
     flex-direction: column-reverse;
+    gap: 10px;
   }
   .tabs-wrapper {
     order: 1;
@@ -628,13 +633,27 @@ input[type="number"]::-webkit-outer-spin-button {
   .content-container {
     padding-bottom: 100px;
   }
-  .desktop-progress {
+
+  .progress-box {
+    height: auto;
+    background: none;
+    padding: 0;
+  }
+  .progress-bar {
+    margin-bottom: 10px;
+  }
+
+  .progress-box ul {
+    display: none;
   }
   .top-next {
     display: block;
   }
   .d-none {
     display: none;
+  }
+  .top-10 {
+    bottom: -120px;
   }
 
   .mobile-progress {
