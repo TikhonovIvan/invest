@@ -586,6 +586,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
   position: absolute;
   left: 0;
+
   bottom: -100px;
   padding: 0;
 }
@@ -596,10 +597,17 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 10px;
 }
 
+.mt-35 {
+  margin-bottom: 30px;
+}
 .tabs-wrapper.mobile {
   display: none;
 }
 @media (max-width: 992px) {
+  .invest-forms-wrapper {
+    border-radius: 8px;
+    padding: 20px 10px 20px 10px;
+  }
   .invest-block-how-much-box-1 {
     width: 100%;
   }
@@ -630,10 +638,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 426px) {
+  .invest-wrapper-blocks {
+    gap: 20px;
+  }
   .content-container {
     padding-bottom: 100px;
   }
 
+  .invest-title-block {
+    width: 320px;
+  }
+  .invest-forms-wrapper {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
   .progress-box {
     height: auto;
     background: none;
@@ -642,12 +663,36 @@ input[type="number"]::-webkit-outer-spin-button {
   .progress-bar {
     margin-bottom: 10px;
   }
+  .add-image,
+  .custom-file-upload {
+    width: 108px;
+    height: 108px;
+  }
+
+  .delete-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    top: 6px;
+    right: 6px;
+  }
+
+  .upload-placeholder .text {
+    font-size: 12px;
+  }
 
   .progress-box ul {
     display: none;
   }
   .top-next {
     display: block;
+
+    position: absolute;
+    left: -10px; /* компенсируем padding */
+    right: -10px; /* компенсируем padding */
+    bottom: -100px;
+    padding: 0;
+    width: auto; /* ширина будет рассчитываться от left до right */
   }
   .d-none {
     display: none;
@@ -672,11 +717,14 @@ input[type="number"]::-webkit-outer-spin-button {
   .form-step.active {
     display: block;
   }
-  .next-btn,
-  .submit-btn {
-    width: 100%;
-  }
+
   .hr {
     display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .invest-title-block {
+    width: 100%;
   }
 }
