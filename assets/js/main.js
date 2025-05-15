@@ -57,9 +57,9 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
     
     // Меняем изображение в зависимости от состояния
     if (parent.classList.contains('open')) {
-        arrowImg.src = "assets/img/login/r2.svg"; // стрелка вверх или другая картинка
+        arrowImg.src = "assets/img/login/r1.svg"; // стрелка вверх или другая картинка
     } else {
-        arrowImg.src = "assets/img/login/r1.svg"; // исходная картинка
+        arrowImg.src = "assets/img/login/r2.svg"; // исходная картинка
     }
 });
 
@@ -84,3 +84,31 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
   backdrop.addEventListener('click', () => {
     modal.classList.add('hidden');
   });
+
+
+/* выпадающий список кабинет пользователя */
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu-2');
+    const arrow = document.querySelector('.account-users-arrow-2');
+    
+    dropdown.classList.toggle('show');
+    arrow.classList.toggle('rotate');
+    
+    // Закрытие при клике вне элемента
+    if (dropdown.classList.contains('show')) {
+      document.addEventListener('click', closeOnClickOutside);
+    } else {
+      document.removeEventListener('click', closeOnClickOutside);
+    }
+  }
+
+  function closeOnClickOutside(event) {
+    const dropdown = document.getElementById('dropdownMenu-2');
+    const trigger = document.querySelector('.account-trigger-2');
+    
+    if (!dropdown.contains(event.target) && !trigger.contains(event.target)) {
+      dropdown.classList.remove('show');
+      document.querySelector('.account-users-arrow-2').classList.remove('rotate');
+      document.removeEventListener('click', closeOnClickOutside);
+    }
+  }

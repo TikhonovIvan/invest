@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Создать объявление</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/post-create.css" />
+    <link rel="stylesheet" href="assets/css/account.css" />
   </head>
   <body>
     <!-- ===== Header Start ===== -->
@@ -42,7 +43,7 @@
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle">
                   Консалтинг
-                  <img src="assets/img/login/r1.svg" alt="" />
+                  <img src="assets/img/login/r2.svg" alt="" />
                   <!-- ▼ стрелка -->
                 </a>
                 <ul class="dropdown-menu">
@@ -62,10 +63,19 @@
               <li class="nav-item">
                 <a href="charity.html" class="nav-link">Благотворительность</a>
               </li>
+
+              <li class="nav-item account-none">
+                <a href="account.html" class="nav-link">Аккаунт</a>
+              </li>
+              <li class="nav-item account-none">
+                <a href="#" class="nav-link">Мои объявления</a>
+              </li>
             </ul>
 
             <div class="header-bnt-menu">
-              <a href="" class="btn btn-active">Подать объявление</a>
+              <a href="post-create.html" class="btn btn-active"
+                >Подать объявление</a
+              >
             </div>
           </nav>
 
@@ -74,33 +84,42 @@
           </div>
 
           <div class="header-bnt">
-            <div class="icons-users-img">
-              <img src="assets/img/account/user-solid.svg" alt="" />
-            </div>
-            <div class="account-users-arrow">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M24.75 12.2499L16 19.7499L7.25 12.2499"
-                  stroke="#DCDFE4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+            <div class="account-dropdown-2">
+              <div class="account-trigger-2" onclick="toggleDropdown()">
+                <div class="icons-users-img">
+                  <img src="assets/img/account/user-solid.svg" alt="" />
+                </div>
+                <div class="account-users-arrow">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.75 12.2499L16 19.7499L7.25 12.2499"
+                      stroke="#DCDFE4"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="dropdown-menu-2" id="dropdownMenu-2">
+                <a href="account.html" class="dropdown-item-2">Аккаунт</a>
+                <a href="" class="dropdown-item-2">Мои объявления</a>
+              </div>
             </div>
 
-            <a href="register.html" class="btn btn-active">Подать объявление</a>
+            <a href="post-create.html" class="btn btn-active"
+              >Подать объявление</a
+            >
           </div>
         </div>
       </div>
     </header>
-
     <!-- ===== Header End ===== -->
 
     <main>
@@ -1088,5 +1107,6 @@
     <script src="assets/js/create-post.js"></script>
     <script src="assets/js/add-images.js"></script>
     <script src="assets/js/number-input.js"></script>
+    <script src="assets/js/account.js"></script>
   </body>
 </html>

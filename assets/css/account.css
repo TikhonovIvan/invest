@@ -1,0 +1,120 @@
+:root {
+  --text-color-black: #000;
+  --text-color-nephritis: #21836d;
+  --text-color-white: #fff;
+
+  --bg-color-nephritis: #21836d;
+  --bg-color-white: #fff;
+  --bg-color-gray: #f2f2f2;
+  --bg-color-black: #000;
+}
+.account-info-bloc {
+  padding: 60px 0;
+}
+
+.account-info-wrapper {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+.account-info-user-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bdbdbd;
+}
+
+.account-info-user-text {
+}
+
+.account-info-user-text h4 {
+  font-size: 25px;
+}
+
+.account-status {
+  font-weight: 500;
+  color: #626975;
+  margin-bottom: 20px;
+}
+.account-date-info {
+  color: #626975;
+  width: 202px;
+}
+
+.account-info-user-text {
+}
+
+/*Активны или не активные объявления*/
+
+.d-aktive-cards,
+.aktive-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.aktive-card,
+.d-aktive-card {
+  background: #d3d3d3;
+  width: 260px;
+  height: 345px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.tab-btn-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.tab-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  margin-right: 10px;
+  border-bottom: var(--bg-color-nephritis);
+}
+
+.tab-btn.active {
+  color: var(--text-color-nephritis); /* Зеленый цвет для активной кнопки */
+  font-weight: bold;
+  border-bottom: 2px solid var(--bg-color-nephritis);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.show {
+  display: flex;
+}
+.account-none {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .account-info-bloc {
+    padding-top: 130px;
+  }
+}
+@media (max-width: 620px) {
+  .account-none {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .account-info-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab-content.show {
+    justify-content: center;
+  }
+}
