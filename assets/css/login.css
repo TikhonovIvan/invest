@@ -131,6 +131,17 @@
   color: var(--text-color-black) !important;
 }
 
+/*Маска для номаре с кодом */
+
+/* .input-wrapper {
+  position: relative;
+} */
+
+.iti {
+  width: 100%;
+}
+/*End*/
+
 @media (max-width: 1200px) {
   .form-block a {
     color: var(--text-color-black);

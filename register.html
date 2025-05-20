@@ -6,6 +6,10 @@
     <title>Регистрация</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
   </head>
   <body>
     <main>
@@ -38,13 +42,14 @@
                   </p>
                 </div>
                 <div class="input-wrapper">
-                  <img class="icons-1" src="assets/img/login/i1.svg" alt="" />
                   <input
-                    type="phone"
+                    id="phone"
+                    type="tel"
                     name="phone"
-                    placeholder="+996 ХХХ-ХХ-ХХ-ХХ"
+                    placeholder=" ХХХ-ХХ-ХХ-ХХ"
                   />
                 </div>
+
                 <div>
                   <p class="form-block-text">Введите свою почту</p>
                 </div>
@@ -85,6 +90,8 @@
       </section>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/phoneInputField.js"></script>
   </body>
 </html>
