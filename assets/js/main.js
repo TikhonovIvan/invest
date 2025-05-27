@@ -64,28 +64,6 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
 });
 
 
-
-
-/*Модальное окно */
-  const openBtn = document.querySelector('.model-w');
-  const modal = document.querySelector('.modal');
-  const closeBtn = document.querySelector('.modal-close');
-  const backdrop = document.querySelector('.fon');
-
-  openBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.remove('hidden');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
-
-  backdrop.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
-
-
 /* выпадающий список кабинет пользователя */
   function toggleDropdown() {
     const dropdown = document.getElementById('dropdownMenu-2');
@@ -112,3 +90,23 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
       document.removeEventListener('click', closeOnClickOutside);
     }
   }
+
+
+  /*Модальное окно */
+  const openBtn = document.querySelector('.model-w');
+  const modal = document.querySelector('.modal');
+  const closeBtn = document.querySelector('.modal-close');
+  const backdrop = document.querySelector('.fon');
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  backdrop.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });

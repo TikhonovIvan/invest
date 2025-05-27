@@ -1,0 +1,82 @@
+.section-404 {
+  padding: 100px 0;
+}
+
+.block-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-404 {
+  font-size: 240px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.text-404 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.text2-404 {
+  font-size: 16px;
+
+  margin-bottom: 60px;
+}
+
+.section-404-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.section-404-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+  height: 60px;
+  font-weight: 600;
+  background-color: var(--bg-color-nephritis);
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 620px) {
+  .title-404 {
+    font-size: 140px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .text-404 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .text2-404 {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 425px) {
+  .title-404 {
+    font-size: 120px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .text-404 {
+    font-size: 20px;
+  }
+  .text2-404 {
+    font-size: 12px;
+  }
+  .section-404-btn a {
+    width: 280px;
+    border-radius: 14px;
+  }
+}
