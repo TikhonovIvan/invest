@@ -126,8 +126,7 @@
 
 .torch-cards-block {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 10px;
 }
 .torch-card {
@@ -145,6 +144,15 @@
 }
 .torch-card-title p {
   font-size: 32px;
+}
+@media (max-width: 992px) {
+  .torch-card {
+    width: 100%;
+  }
+  .torch-cards-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 425px) {
@@ -275,6 +283,9 @@
     font-size: 30px;
   }
   .works-info-b-card {
+    width: 100%;
+  }
+  .works-info-b-card-img img {
     width: 100%;
   }
 }
