@@ -81,9 +81,23 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .charity-info-text {
     width: 100%;
+  }
+
+  .charity-info-img img {
+    width: 100%;
+  }
+
+  .charity-info-img {
+    width: 100%;
+    height: auto;
+    background: radial-gradient(
+      61.99% 61.99% at 50% 50%,
+      #21836d 0%,
+      #f5f5f5 61.67%
+    );
   }
 }
 
@@ -112,7 +126,9 @@
 
 .torch-cards-block {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 .torch-card {
   width: 453px;
@@ -131,6 +147,88 @@
   font-size: 32px;
 }
 
+@media (max-width: 425px) {
+  .torch-card-title p {
+    font-size: 28px;
+  }
+}
+
+/*hellp-live-b*/
+
+.hellp-live-b {
+  padding-top: 100px;
+}
+.hellp-live-b-block h2 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  margin-bottom: 25px;
+}
+
+.hellp-live-b-block-tex {
+  margin-bottom: 60px;
+}
+.exempla-active {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+.hellp-live-b-active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.hellp-live-b-active-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  width: 216px;
+  height: 220px;
+  background: url(../img/charity/vector.png);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.active-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 188px;
+  padding: 10px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 100px;
+  background: rgba(33, 131, 109, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.img-t {
+  margin-bottom: -20px;
+}
+.active-card-img {
+  text-align: center;
+}
+.active-card-img img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .hellp-live-b-block h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hellp-live-b-block h2 {
+    font-size: 30px;
+  }
+  .hellp-live-b-active-card {
+    width: 100%;
+  }
+}
 /*works-info-b */
 
 .works-info-b {
@@ -141,18 +239,16 @@
   font-weight: 700;
   font-size: 60px;
 }
-.works-info-b-block p {
-}
-.title-nephritis {
-}
+
 .works-info-b-cards {
   margin-top: 60px;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 20px;
 }
 .works-info-b-card {
-  width: 453px;
+  width: 440px;
   height: 410px;
   padding: 10px 10px 65px 10px;
   background-color: #fff;
@@ -174,7 +270,80 @@
 .works-info-b-card-text {
   width: 190px;
 }
+@media (max-width: 425px) {
+  .works-info-b-block h4 {
+    font-size: 30px;
+  }
+  .works-info-b-card {
+    width: 100%;
+  }
+}
 
+/*hellpe-b*/
+
+.hellpe-b {
+  padding: 100px 0 60px 0;
+}
+.hellpe-b-block {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.hellpe-b-block-1 h2 {
+  font-size: 60px;
+}
+
+.hellpe-b-block-1 p {
+  width: 560px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hellpe-b-block-2 img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .hellpe-b-block {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .hellpe-b-block-1 p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .hellpe-b {
+    padding: 60px 0 60px 0;
+  }
+
+  .hellpe-b-block-1 h2 {
+    font-size: 30px;
+  }
+}
+
+/*.if-info */
+.if-info {
+  padding: 100px 0;
+}
+.container {
+}
+.if-info-b-block h4 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+.title-nephritis {
+}
+
+@media (max-width: 425px) {
+  .if-info-b-block h4 {
+    font-size: 30px;
+  }
+}
 /* charity-info-form { */
 
 .charity-info-form {
@@ -283,7 +452,19 @@
     padding: 40px 0;
   }
   .charity-info-form-lable {
+    display: flex;
+    flex-direction: column;
   }
+  .charity-info-form-lable input::placeholder {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .charity-info-form-lable textarea::placeholder {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
   .charity-info-forms {
     padding: 10px;
   }
