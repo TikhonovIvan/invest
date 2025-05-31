@@ -46,15 +46,22 @@
 }
 
 .charity-info-img img {
-  max-width: 580px;
-  width: 100%;
+  width: 374px;
+  height: 561px;
 }
 
 .charity-info-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  width: 780px;
+  height: 780px;
   background: radial-gradient(
     61.99% 61.99% at 50% 50%,
     #21836d 0%,
-    #f5f5f5 75%
+    #f5f5f5 61.67%
   );
 }
 @media (max-width: 1024px) {
@@ -97,286 +104,75 @@
   }
 }
 
-/* good-info  */
+/*torch*/
 
-.good-info {
+.torch {
+  padding: 60px 0;
+}
+
+.torch-cards-block {
+  display: flex;
+  gap: 20px;
+}
+.torch-card {
+  width: 453px;
+  height: 204px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #cbdeda;
+}
+.torch-card-img {
+  margin-bottom: 20px;
+}
+.torch-card-img img {
+  background-color: #cbdeda;
+}
+.torch-card-title p {
+  font-size: 32px;
+}
+
+/*works-info-b */
+
+.works-info-b {
   padding: 100px 0;
 }
 
-.good-info-block {
-}
-.good-info-title {
-  margin-bottom: 60px;
-}
-
-.good-info-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 10px;
-}
-.good-info-card {
-  padding: 20px 20px 58px 20px;
-  width: 450px;
-  background-color: var(--bg-color-white);
-}
-.good-info-card-title,
-.good-info-card-number {
-  font-size: 32px;
+.works-info-b-block h4 {
   font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 60px;
 }
-.good-info-card-number {
-  color: var(--text-color-nephritis);
+.works-info-b-block p {
 }
-.good-info-card-text {
-  font-weight: 500;
+.title-nephritis {
 }
-
-@media (max-width: 992px) {
-  .good-info-card {
-    width: 350px;
-  }
-  .good-info-title {
-    font-size: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .good-info-title {
-    margin-bottom: 40px;
-  }
-  .good-info-card {
-    width: 100%;
-  }
-  .good-info-title {
-    font-size: 40px;
-  }
-}
-@media (max-width: 426px) {
-  .good-info {
-    padding: 40px 0;
-  }
-  .good-info-cards {
-    justify-content: center;
-    row-gap: 15px;
-    column-gap: 10px;
-  }
-  .good-info-card {
-    padding: 10px 10px 15px 10px;
-    width: 174px;
-  }
-  .good-info-title {
-    font-size: 32px;
-  }
-  .good-info-card-title,
-  .good-info-card-number {
-    font-size: 16px;
-  }
-  .good-info-card-text {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 375px) {
-  .good-info-cards {
-    justify-content: center;
-    row-gap: 15px;
-    column-gap: 5px;
-  }
-  .good-info-card {
-    padding: 8px 8px 12px 8px;
-    width: 140px;
-  }
-  .good-info-title {
-    font-size: 32px;
-  }
-  .good-info-card-title,
-  .good-info-card-number {
-    font-size: 14px;
-  }
-  .good-info-card-text {
-    font-size: 10px;
-  }
-}
-
-/*For-what-info  */
-
-.for-what-info {
-  padding-bottom: 100px;
-}
-
-.for-what-info-block {
-}
-.for-what-info-title {
-  margin-bottom: 60px;
-}
-
-.for-what-info-cards {
+.works-info-b-cards {
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 10px;
+  gap: 20px;
 }
-.for-what-info-card {
+.works-info-b-card {
+  width: 453px;
+  height: 410px;
+  padding: 10px 10px 65px 10px;
+  background-color: #fff;
   border-radius: 30px;
-
-  background-color: var(--bg-color-white);
-  width: 335px;
-  padding: 10px 10px 28px 10px;
 }
-
-.for-what-info-card-body {
-  padding-left: 10px;
-}
-.for-what-info-card-body h3 {
-  width: 150px;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.for-what-info-card-body p {
-  opacity: 0.8;
-}
-
-.for-what-info-card-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 220px;
-  background: #f5f5f5;
-  background-image: url(../img/school/bg-car.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 20px;
+.works-info-b-card-img {
+  text-align: center;
   margin-bottom: 30px;
+  background: url(../img/charity/vector.png) no-repeat;
+  background-color: #f5f5f5;
+  border-radius: 20px;
 }
-
-/*слайдер*/
-
-.for-what-block-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.for-what-navigation {
-  display: flex;
-  column-gap: 10px;
-  align-items: center;
-  margin-top: -30px;
-}
-
-.story-users-button-prev::after,
-.story-users-button-next::after,
-.for-what-button-prev::after,
-.for-what-button-next::after {
-  font-size: 16px;
+.works-info-b-card-number {
+  font-size: 30px;
   font-weight: 600;
-  color: var(--bg-color-nephritis);
+  color: #21836d;
+  margin-bottom: 15px;
 }
-
-/* Чтобы кнопки не убегали */
-.story-users-button-prev,
-.story-users-button-next,
-.for-what-button-prev,
-.for-what-button-next {
-  position: static;
-}
-.for-what-info-title br {
-  display: none;
-}
-
-@media (max-width: 992px) {
-  .for-what-info-title {
-    font-size: 40px;
-  }
-}
-@media (max-width: 425px) {
-  .for-what-info-card-body h3 {
-    font-size: 28px;
-  }
-  .for-what-info-card-body p {
-    font-size: 14px;
-  }
-  .for-what-info-title {
-    font-size: 30px;
-  }
-  .for-what-info-title br {
-    display: block;
-  }
-
-  .for-what-info-card {
-    width: 100%;
-  }
-}
-
-/* participate-info*/
-
-.participate-info {
-  padding-bottom: 100px;
-}
-
-.participate-info-title {
-  margin-bottom: 60px;
-}
-
-.participate-info-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 10px;
-}
-.participate-info-card {
-  border-radius: 30px;
-
-  background-color: var(--bg-color-white);
-  padding: 10px 10px 67px 10px;
-  width: 450px;
-}
-
-.participate-info-card-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f5f5f5;
-  background-image: url(../img/charity/vector.png);
-  background-repeat: no-repeat;
-
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 30px;
-}
-.participate-info-card-body {
-  padding: 0 10px;
-  width: 350px;
-}
-
-@media (max-width: 992px) {
-  .participate-info-title {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 500px) {
-  .participate-info-card {
-    width: 100%;
-  }
-}
-@media (max-width: 425px) {
-  .participate-info {
-    padding-bottom: 60px;
-  }
-  .participate-info-title {
-    font-size: 30px;
-  }
-  .participate-info-card {
-    padding-bottom: 20px;
-  }
-  .participate-info-card-body {
-    width: 100%;
-  }
+.works-info-b-card-text {
+  width: 190px;
 }
 
 /* charity-info-form { */
