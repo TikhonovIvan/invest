@@ -172,9 +172,12 @@
   row-gap: 30px;
 }
 .projects-market-card {
-  padding: 5px 5px 20px 5px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 5px 10px 20px 5px;
   width: 260px;
-  height: 350px;
+
   background: #ffffff;
   border-radius: 24px;
 }
@@ -186,6 +189,7 @@
 }
 .market-card-body {
   padding-left: 10px;
+  flex-grow: 1;
 }
 .market-card-title {
   font-size: 18px;
